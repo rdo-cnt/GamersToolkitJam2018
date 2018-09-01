@@ -27,13 +27,18 @@ public class PlayerController : MonoBehaviour
     private bool parryInput;
 
     private bool isParrying;
-    public float parryRadius; //radius of where your parry effects
+    //commented out the radius in case we go back to full round parry.
+    //public float parryRadius; //radius of where your parry effects
     public float parryTime; //how long does the parry last?
     public float parryBounceForce; //how high can you bounce off enemies?
     public LayerMask parryLayers; // what can you parry?
+    public Vector2 parryOffset; // how far forward is the hitbox
+    public Vector2 parryHitboxSize; // how big is the hitbox
 
-    private Rigidbody2D rb;
+
+    private Rigidbody2D rb; //components we'll be messing with
     private Collider2D colli;
+    private SpriteRenderer sprite;
 
     public PhysicsMaterial2D physMat_ground;
     public PhysicsMaterial2D physMat_air; // having no friction in the air keeps you from sliding on walls
@@ -42,8 +47,11 @@ public class PlayerController : MonoBehaviour
     // Use this for initialization
     void Start()
     {
+        GameController.setPlayerReference(this); // set self as player reference to the game controller
+
         rb = GetComponent<Rigidbody2D>(); //grabbing your components
         colli = GetComponent<Collider2D>();
+        sprite = GetComponent<SpriteRenderer>();
 
     }
 
@@ -79,25 +87,63 @@ public class PlayerController : MonoBehaviour
         parryInput = false;
     }
 
+    void OnDrawGizmos()
+    {
+
+        Gizmos.color = Color.blue;
+        if (isParrying)
+        {
+            if (sprite.flipX == false)
+                Gizmos.DrawCube(transform.position + (Vector3)parryOffset, parryHitboxSize);
+            else
+                Gizmos.DrawCube(transform.position - (Vector3)parryOffset, parryHitboxSize);
+
+        }
+
+    }
+
+
     IEnumerator Parry()
     {
-        isParrying = true;
-        float startTime = Time.time;
-        while (Time.time - startTime < parryTime)
-        {
-            Collider2D[] hits = Physics2D.OverlapCircleAll(transform.position, parryRadius, parryLayers);
-            yield return new WaitForFixedUpdate();
+        isParrying = true; //make sure you can't parry while you parry
+        float startTime = Time.time; //grabbing the time to compare to later
 
-            if (hits.Length > 0)
+        while (Time.time - startTime < parryTime) //loop this for <parryTime> seconds
+        {
+            // Collider2D[] hits = Physics2D.OverlapCircleAll(transform.position, parryRadius, parryLayers); //grabbing everything hit
+
+            Collider2D[] hits = new Collider2D[0];
+
+            if (sprite.flipX == true) // parry either left or right, depending on the sprite's direction
+                hits = Physics2D.OverlapBoxAll(rb.position - parryOffset, parryHitboxSize, 0, parryLayers);
+            else
+                hits = Physics2D.OverlapBoxAll(rb.position + parryOffset, parryHitboxSize, 0, parryLayers);
+
+            Collider2D[] underHits = new Collider2D[0];
+
+            if (!isGrounded)
+                underHits = Physics2D.OverlapBoxAll(rb.position + Vector2.down * 0.5f, new Vector2(1, 0.25f), 0, parryLayers); // small hitbox under the player just for bouncing
+
+            if (underHits.Length > 0)
             {
-                if (!isGrounded)
+                ParryBounce();
+            }
+
+
+            if (hits.Length > 0) // if you parry anything
+            {
+
+                if (!isGrounded) // and you're not on the ground
                 {
 
-                    ParryBounce();
+                    ParryBounce(); //bounce off of what you parried
                 }
                 isParrying = false;
                 yield break;
             }
+
+            yield return new WaitForFixedUpdate(); // looping on fixed update for more consistency
+
         }
         isParrying = false;
     }
@@ -115,7 +161,7 @@ public class PlayerController : MonoBehaviour
 
     void GroundCheck()
     {
-		//isGrounded = true;
+        //isGrounded = true;
 
         RaycastHit2D hit = Physics2D.CircleCast(transform.position, 0.1f, Vector2.down, 0.5f, groundLayers); // send a circle down to check for ground
 
@@ -143,10 +189,12 @@ public class PlayerController : MonoBehaviour
         if (rb.velocity.x < walkSpeed_max && moveInput > 0) //checks if you can move right
         {
             rb.AddForce(Vector2.right * walkSpeed_acceleration * Input.GetAxisRaw("Horizontal"));
+            sprite.flipX = false; //don't flip around
         }
         if (rb.velocity.x > -walkSpeed_max && moveInput < 0) //checks if you can move left
         {
             rb.AddForce(Vector2.right * walkSpeed_acceleration * Input.GetAxisRaw("Horizontal"));
+            sprite.flipX = true; //flip around
         }
 
 

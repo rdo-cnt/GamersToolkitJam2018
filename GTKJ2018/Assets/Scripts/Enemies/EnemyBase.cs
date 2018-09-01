@@ -6,7 +6,11 @@ public class EnemyBase : MonoBehaviour {
 
     //Variables
     public bool canBeHurt = false;
-    public int health = 1;
+    public bool stunned = false;
+
+    //Hit and hurtbox components
+    public EnemyHurtBox myHurtBox;
+    public EnemyHitBox enemyHitBox;
 
     //Get Animation Manager
     protected AnimationManager m_anim;
