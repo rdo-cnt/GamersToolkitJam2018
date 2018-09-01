@@ -8,6 +8,10 @@ public class EnemyBase : MonoBehaviour {
     public bool canBeHurt = false;
     public bool stunned = false;
 
+    //Hit and hurtbox components
+    public EnemyHurtBox myHurtBox;
+    public EnemyHitBox enemyHitBox;
+
     //Get Animation Manager
     protected AnimationManager m_anim;
 

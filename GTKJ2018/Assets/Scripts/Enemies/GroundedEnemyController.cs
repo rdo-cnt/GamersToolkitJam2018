@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GroundedEnemyController : MonoBehaviour {
+public class GroundedEnemyController : EnemyBase
+{
 
     //Get Collision Components
     protected Rigidbody2D m_rb;
