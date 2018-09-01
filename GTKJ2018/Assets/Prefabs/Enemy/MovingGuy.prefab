@@ -233,6 +233,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canBeHurt: 0
   stunned: 0
+  stunTimer: 2
+  knockbackForce: {x: 3, y: 3}
   myHurtBox: {fileID: 0}
   enemyHitBox: {fileID: 0}
   speed: 5
@@ -240,6 +242,8 @@ MonoBehaviour:
   whatIsGround:
     serializedVersion: 2
     m_Bits: 256
+  parry_knockback: {x: 0, y: 0}
+  parry_stunTime: 0
 --- !u!114 &114135527172396216
 MonoBehaviour:
   m_ObjectHideFlags: 1

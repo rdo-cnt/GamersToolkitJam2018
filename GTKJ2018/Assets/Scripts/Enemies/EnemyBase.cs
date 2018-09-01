@@ -36,7 +36,12 @@ public class EnemyBase : MonoBehaviour {
     //parry behavior
     public void OnParried(Transform attackSource)
     {
+        if (stunned)
+            return;
+
         StartCoroutine(StunTimer());
+
+        m_rb.velocity = Vector2.zero;
 
         //knockback based on direction the attack came from
         m_rb.AddForce(new Vector2(knockbackForce.x * Mathf.Sign(transform.position.x - attackSource.position.x), knockbackForce.y), ForceMode2D.Impulse);
@@ -48,9 +53,9 @@ public class EnemyBase : MonoBehaviour {
     {
         stunned = true;
         float startTime = Time.time;
-        while (startTime - Time.time < stunTimer)
+        while (Time.time - startTime < stunTimer)
         {
-            yield return null;
+            yield return new WaitForFixedUpdate();
         }
         stunned = false;
 

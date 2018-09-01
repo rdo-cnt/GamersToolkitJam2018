@@ -151,6 +151,16 @@ public class PlayerController : MonoBehaviour
             if (hits.Length > 0) // if you parry anything
             {
 
+                foreach (Collider2D col in hits)
+                {
+                    EnemyBase enemy = col.GetComponent<EnemyBase>();
+                    if (enemy != null)
+                    {
+                        Debug.Log(col.name);
+                        enemy.OnParried(transform);
+                    }
+                }
+
                 if (!isGrounded) // and you're not on the ground
                 {
 
