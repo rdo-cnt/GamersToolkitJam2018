@@ -10,7 +10,7 @@ public class CMCamManager : MonoBehaviour {
 	// Use this for initialization
 	void Start ()
     {
-        cBase.Follow = GameObject.FindObjectOfType<PlayerController>().transform;
+        //cBase.Follow = GameObject.FindObjectOfType<PlayerController>().transform;
 	}
 	
 	// Update is called once per frame
