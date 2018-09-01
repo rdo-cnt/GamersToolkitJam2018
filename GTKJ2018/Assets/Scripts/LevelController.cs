@@ -8,6 +8,7 @@ public class LevelController : MonoBehaviour {
     public GameObject playerObject;
     public Transform spawnLocation;
     public CMCamManager camManager;
+    public UIController uiControl;
 
     public float playerRespawnTime = 3.0f;
     float playerRespawnStart;
@@ -46,6 +47,7 @@ public class LevelController : MonoBehaviour {
             playerObject = GameObject.Instantiate(playerPrefab);
             playerObject.transform.position = spawnLocation.position;
             camManager.SetFollowTarget(playerObject.transform);
+            uiControl.SetPlayerHearts(7);
         }
 
         
@@ -60,5 +62,7 @@ public class LevelController : MonoBehaviour {
         isRespawning = true;
         playerRespawnStart = Time.time;
     }
+
+
 
 }

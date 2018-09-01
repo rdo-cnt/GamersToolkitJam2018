@@ -12,6 +12,10 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    public int currentHealth = 7;
+    public int maxHealth = 7;
+    bool isDead = false;
+    
 
     public float walkSpeed_max = 5; // max walking speed
     public float walkSpeed_acceleration = 15; // how fast you move towards max walking speed
@@ -43,6 +47,10 @@ public class PlayerController : MonoBehaviour
     public PhysicsMaterial2D physMat_ground;
     public PhysicsMaterial2D physMat_air; // having no friction in the air keeps you from sliding on walls
 
+    float invincibilityTimer = .5f;
+    float invincibilityStart;
+    bool isInvincible;
+
 
     // Use this for initialization
     void Start()
@@ -66,6 +74,14 @@ public class PlayerController : MonoBehaviour
         if (Input.GetButtonDown("Fire1"))
         {
             parryInput = true;
+        }
+
+        if (isInvincible)
+        {
+            if (invincibilityStart + invincibilityTimer < Time.time)
+            {
+                SetInvincible(false);
+            }
         }
 
     }
@@ -183,7 +199,10 @@ public class PlayerController : MonoBehaviour
 
         if (!isGrounded && !jump_airControl) // if we have no air control, do not move in the air
             return;
-
+        if (isDead) //cant move while dead
+        {
+            return;
+        }
         float moveInput = Input.GetAxisRaw("Horizontal"); //grabing input
 
         if (rb.velocity.x < walkSpeed_max && moveInput > 0) //checks if you can move right
@@ -223,7 +242,28 @@ public class PlayerController : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log("trigger enter");
+        Debug.Log("trigger enter " + collision.gameObject.name);
+        if (!isInvincible && !isParrying)
+        {
+            if (collision.gameObject.name == "HurtBox")
+            {
+                Debug.Log("Ouch");
+                TakeDamage(1);
+            }
+        }
+        
+    }
+
+    void SetInvincible(bool status)
+    {
+        isInvincible = status;
+        invincibilityStart = Time.time;
+        this.gameObject.GetComponent<SpriteRenderer>().color = Color.white;
+        if (isInvincible)
+        {
+            this.gameObject.GetComponent<SpriteRenderer>().color = Color.blue;
+        }
+        
     }
 
     public void Die()
@@ -231,6 +271,28 @@ public class PlayerController : MonoBehaviour
         Debug.Log("got player die");
         GameController.instance.PlaySoundClip(0);
         GameController.instance.levelController.KillPlayer();
+        isDead = true;
+        
+    }
+
+    public void TakeDamage(int damage)
+    {
+        if (!isDead)
+        {
+            SetInvincible(true);
+            currentHealth -= damage;
+
+            if (currentHealth < 0 || currentHealth >= maxHealth)
+            {
+                currentHealth = Mathf.Clamp(currentHealth, 0, maxHealth);
+                
+            }
+            GameController.instance.levelController.uiControl.SetPlayerHearts(currentHealth);
+            if (currentHealth <= 0)
+            {
+                Die();
+            }
+        }
         
     }
 

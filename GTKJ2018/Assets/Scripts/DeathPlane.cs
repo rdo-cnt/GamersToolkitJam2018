@@ -16,6 +16,7 @@ public class DeathPlane : MonoBehaviour {
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        Debug.Log("triggering death on " + collision.gameObject.name);
         collision.gameObject.SendMessage("Die");
     }
 }
