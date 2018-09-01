@@ -94,6 +94,6 @@ public class GunFire : MonoBehaviour {
     void FireBullet()
     {
         GameObject newBullet = Instantiate(bulletPrefab);
-        bulletPrefab.transform.position = this.transform.position; //position of gun here
+        newBullet.transform.position = this.transform.position; //position of gun here
     }
 }

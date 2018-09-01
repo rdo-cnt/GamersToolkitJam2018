@@ -23,22 +23,40 @@ public class Bullet : MonoBehaviour {
         this.transform.position += moveDirection * Time.deltaTime * bulletSpeed;
     }
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
         if (!isHit)
         {
             isHit = true;
             if (collision.gameObject.tag == "Player")
             {
+                Debug.Log("hit player trigger");
                 collision.gameObject.SendMessage("BulletHit"); //replace with proper call and response for parry
             }
             else
             {
-                Destroy(this.gameObject);
+                //Destroy(this.gameObject);
             }
 
         }
-        
-        
     }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (!isHit)
+        {
+            isHit = true;
+            if (collision.gameObject.tag == "Player")
+            {
+                Debug.Log("hit player collider");
+                collision.gameObject.SendMessage("BulletHit"); //replace with proper call and response for parry
+            }
+            else
+            {
+                //Destroy(this.gameObject);
+            }
+
+        }
+    }
+
 }
