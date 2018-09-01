@@ -15,6 +15,7 @@ public class PlayerController : MonoBehaviour
     public int currentHealth = 7;
     public int maxHealth = 7;
     bool isDead = false;
+
     
 
     public float walkSpeed_max = 5; // max walking speed
@@ -75,13 +76,13 @@ public class PlayerController : MonoBehaviour
             parryInput = true;
         }
 
-        if (isInvincible)
-        {
-            if (invincibilityStart + invincibilityTimer < Time.time)
-            {
-                SetInvincible(false);
-            }
-        }
+        //if (isInvincible)
+        //{
+        //    if (invincibilityStart + invincibilityTimer < Time.time)
+        //    {
+        //        SetInvincible(false);
+        //    }
+        //}
 
     }
 
@@ -244,13 +245,20 @@ public class PlayerController : MonoBehaviour
     void SetInvincible(bool status)
     {
         isInvincible = status;
-        invincibilityStart = Time.time;
+        
         this.gameObject.GetComponent<SpriteRenderer>().color = Color.white;
         if (isInvincible)
         {
             this.gameObject.GetComponent<SpriteRenderer>().color = Color.blue;
+            StartCoroutine(StartInvincibility());
         }
         
+    }
+
+    public IEnumerator StartInvincibility()
+    {
+        yield return new WaitForSeconds(invincibilityTimer);
+        SetInvincible(false);
     }
 
     public void Die()
@@ -264,7 +272,7 @@ public class PlayerController : MonoBehaviour
 
     public void TakeDamage(int damage)
     {
-        if (!isDead)
+        if (!isDead && !isInvincible)
         {
             SetInvincible(true);
             currentHealth -= damage;
