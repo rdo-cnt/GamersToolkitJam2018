@@ -240,20 +240,6 @@ public class PlayerController : MonoBehaviour
 
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        Debug.Log("trigger enter " + collision.gameObject.name);
-        if (!isInvincible && !isParrying)
-        {
-            if (collision.gameObject.name == "HurtBox")
-            {
-                Debug.Log("Ouch");
-                TakeDamage(1);
-            }
-        }
-        
-    }
-
     void SetInvincible(bool status)
     {
         isInvincible = status;

@@ -41,7 +41,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4533379019192194}
   - component: {fileID: 61719277304495898}
-  - component: {fileID: 114607873132397008}
+  - component: {fileID: 114135527172396216}
   m_Layer: 0
   m_Name: HitBox
   m_TagString: Untagged
@@ -58,7 +58,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4856034482955214}
   - component: {fileID: 61917723172935946}
-  - component: {fileID: 114961644307296438}
+  - component: {fileID: 114372254285161744}
   m_Layer: 0
   m_Name: HurtBox
   m_TagString: Untagged
@@ -164,7 +164,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.014926434, y: -0.015466809}
+  m_Offset: {x: 0, y: -0.015466809}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -189,7 +189,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.0031132698, y: -0.11}
+  m_Offset: {x: 0, y: -0.11}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -233,19 +233,30 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canBeHurt: 0
   stunned: 0
-  myHurtBox: {fileID: 114961644307296438}
-  enemyHitBox: {fileID: 114607873132397008}
+  myHurtBox: {fileID: 0}
+  enemyHitBox: {fileID: 0}
   speed: 5
   bFacingLeft: 0
   whatIsGround:
     serializedVersion: 2
     m_Bits: 256
---- !u!114 &114607873132397008
+--- !u!114 &114135527172396216
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1187083748548380}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a0547be22583dc947869d896b5d5a6c8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &114372254285161744
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1783792476959120}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a85d36be9b3c4ed44b301253c48bf70c, type: 3}
@@ -261,17 +272,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9501261392aad91479f9f4b5e1264943, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &114961644307296438
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1783792476959120}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a0547be22583dc947869d896b5d5a6c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!212 &212965158356597690

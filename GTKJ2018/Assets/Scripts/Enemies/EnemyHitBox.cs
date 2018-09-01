@@ -25,10 +25,13 @@ public class EnemyHitBox : MonoBehaviour
         //if it hits the player
         if (other.GetComponent<PlayerController>() != null)
         {
+            Debug.Log("trigger enter " + gameObject.name);
             //if the hitbox deals damage at all
             if (damageDealt > 0)
             {
                 //Put damage players function here
+                Debug.Log("trigger enter " + gameObject.name);
+                other.GetComponent<PlayerController>().TakeDamage(damageDealt);
             }
         }
     }

@@ -73,7 +73,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4841824253788892}
   - component: {fileID: 61074688218171260}
-  - component: {fileID: 114672541852511620}
+  - component: {fileID: 114491968851669322}
   m_Layer: 0
   m_Name: HitBox
   m_TagString: Untagged
@@ -128,7 +128,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1753942929167280}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.030000687, y: 0.13, z: 0.14453125}
+  m_LocalPosition: {x: 2.13, y: 0.13, z: 0.14453125}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4421962685356252}
@@ -193,7 +193,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -4.41, y: 0.3841796}
+  m_Offset: {x: -6.2153425, y: 0.3841796}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -204,7 +204,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.6247463, y: 7.5116405}
+  m_Size: {x: 1.3840346, y: 7.5116405}
   m_EdgeRadius: 0
 --- !u!61 &61667180993598040
 BoxCollider2D:
@@ -267,7 +267,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a0547be22583dc947869d896b5d5a6c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &114672541852511620
+--- !u!114 &114491968851669322
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -275,9 +275,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1943630202798286}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a0547be22583dc947869d896b5d5a6c8, type: 3}
+  m_Script: {fileID: 11500000, guid: a85d36be9b3c4ed44b301253c48bf70c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damageDealt: 1
 --- !u!114 &114876399824921318
 MonoBehaviour:
   m_ObjectHideFlags: 1
