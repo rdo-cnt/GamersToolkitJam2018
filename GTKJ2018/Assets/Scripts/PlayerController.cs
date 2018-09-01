@@ -38,7 +38,7 @@ public class PlayerController : MonoBehaviour
     public LayerMask parryLayers; // what can you parry?
     public Vector2 parryOffset; // how far forward is the hitbox
     public Vector2 parryHitboxSize; // how big is the hitbox
-
+    public AudioSource parrySoundEffect; //sound to play when parrying
 
     private Rigidbody2D rb; //components we'll be messing with
     private Collider2D colli;
@@ -56,7 +56,6 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         GameController.setPlayerReference(this); // set self as player reference to the game controller
-
         rb = GetComponent<Rigidbody2D>(); //grabbing your components
         colli = GetComponent<Collider2D>();
         sprite = GetComponent<SpriteRenderer>();
@@ -123,6 +122,8 @@ public class PlayerController : MonoBehaviour
     {
         isParrying = true; //make sure you can't parry while you parry
         float startTime = Time.time; //grabbing the time to compare to later
+        parrySoundEffect.Play();
+
 
         while (Time.time - startTime < parryTime) //loop this for <parryTime> seconds
         {

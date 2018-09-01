@@ -19,6 +19,8 @@ public class GunFire : MonoBehaviour {
     int bulletCounter = 0;
     int bulletMax = 6;
 
+    public AudioSource shootingSound;
+
 	// Use this for initialization
 	void Start ()
     {
@@ -93,6 +95,7 @@ public class GunFire : MonoBehaviour {
 
     void FireBullet()
     {
+        shootingSound.Play();
         GameObject newBullet = Instantiate(bulletPrefab);
         newBullet.transform.position = this.transform.position; //position of gun here
     }
