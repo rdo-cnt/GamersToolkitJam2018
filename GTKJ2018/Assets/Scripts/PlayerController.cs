@@ -221,4 +221,17 @@ public class PlayerController : MonoBehaviour
 
     }
 
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        Debug.Log("trigger enter");
+    }
+
+    public void Die()
+    {
+        Debug.Log("got player die");
+        GameController.instance.PlaySoundClip(0);
+        GameController.instance.levelController.KillPlayer();
+        
+    }
+
 }
