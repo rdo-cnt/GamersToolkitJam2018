@@ -64,6 +64,7 @@ public class PlayerController : MonoBehaviour {
 
     void GroundCheck()
     {
+		//isGrounded = true;
 
         RaycastHit2D hit = Physics2D.CircleCast(transform.position, 0.1f, Vector2.down, 0.5f, groundLayers); // send a circle down to check for ground
 
