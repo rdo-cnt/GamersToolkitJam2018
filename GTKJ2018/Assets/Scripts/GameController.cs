@@ -22,6 +22,10 @@ public class GameController : MonoBehaviour {
     //Level managing variables
     public static int levelIndex;
 
+    //Receive player
+    public static PlayerController _player;
+    public static PlayerController player { get { return _player; } }
+
     //audio list
     public AudioSource soundPlayer;
     public AudioSource musicPlayer;
@@ -104,6 +108,11 @@ public class GameController : MonoBehaviour {
         {
             soundPlayer.PlayOneShot(deathEffect);
         }
+    }
+
+    public static void setPlayerReference(PlayerController s)
+    {
+        _player = s;
     }
 
 
