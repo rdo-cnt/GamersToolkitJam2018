@@ -17,4 +17,9 @@ public class CMCamManager : MonoBehaviour {
 	void Update () {
 		
 	}
+
+    public void SetFollowTarget(Transform followTarget)
+    {
+        cBase.Follow = followTarget;
+    }
 }

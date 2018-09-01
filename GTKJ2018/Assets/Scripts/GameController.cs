@@ -17,9 +17,16 @@ public class GameController : MonoBehaviour {
     //Creating singleton
     public static GameController instance { get { return _instance; } }
     private static GameController _instance = null;
+    public LevelController levelController;
 
     //Level managing variables
     public static int levelIndex;
+
+    //audio list
+    public AudioSource soundPlayer;
+    public AudioSource musicPlayer;
+    public AudioClip deathEffect;
+    //public AudioClip[] soundEffects;
 
 
     void Awake()
@@ -43,6 +50,10 @@ public class GameController : MonoBehaviour {
         if (Input.GetKeyDown("n"))
         {
             nextScene();
+        }
+        if (!levelController) //simple for now, add in maybe a check to see if its in a level scene later
+        {
+            levelController = GameObject.FindObjectOfType<LevelController>();
         }
 
     }
@@ -87,6 +98,13 @@ public class GameController : MonoBehaviour {
         SceneManager.LoadScene(levelIndex);
     }
 
+    public void PlaySoundClip(int soundIndex)
+    {
+        if (soundIndex == 0)
+        {
+            soundPlayer.PlayOneShot(deathEffect);
+        }
+    }
 
 
 
