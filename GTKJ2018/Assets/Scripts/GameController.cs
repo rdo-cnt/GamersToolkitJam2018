@@ -19,7 +19,7 @@ public class GameController : MonoBehaviour {
     private static GameController _instance = null;
 
     //Level managing variables
-    public int levelIndex;
+    public static int levelIndex;
 
 
     void Awake()
@@ -40,15 +40,19 @@ public class GameController : MonoBehaviour {
 	
 	void Update ()
     {
-		
-	}
+        if (Input.GetKeyDown("n"))
+        {
+            nextScene();
+        }
+
+    }
 
     void InitValues()
     {
         //insert whatever here later
     }
 
-    public void nextScene()
+    public static void nextScene()
     {
         int n = (levelIndex + 1);
         //Go back to the First Scene if this is the last scene
@@ -63,7 +67,7 @@ public class GameController : MonoBehaviour {
         SceneManager.LoadScene(levelIndex);
     }
 
-    public void previousScene()
+    public static void previousScene()
     {
         int n = (levelIndex - 1);
         //edge Case, avoids going lower than 0 as a level index
@@ -78,10 +82,12 @@ public class GameController : MonoBehaviour {
         SceneManager.LoadScene(levelIndex);
     }
 
-    public void restartScene()
+    public static void restartScene()
     {
         SceneManager.LoadScene(levelIndex);
     }
+
+
 
 
 
