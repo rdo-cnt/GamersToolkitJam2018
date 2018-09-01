@@ -6,7 +6,7 @@ public class EnemyBase : MonoBehaviour {
 
     //Variables
     public bool canBeHurt = false;
-    public int health = 1;
+    public bool stunned = false;
 
     //Get Animation Manager
     protected AnimationManager m_anim;
