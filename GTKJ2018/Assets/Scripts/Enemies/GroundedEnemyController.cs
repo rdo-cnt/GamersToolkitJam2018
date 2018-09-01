@@ -8,9 +8,7 @@ public class GroundedEnemyController : MonoBehaviour {
     protected Rigidbody2D m_rb;
     protected BoxCollider2D m_col;
 
-    //Animation Compnents
-    protected Animator m_anim;
-
+    public bool bFacingLeft;
 
 
     // Use this for initialization
@@ -27,4 +25,10 @@ public class GroundedEnemyController : MonoBehaviour {
 	void Update () {
 		
 	}
+
+    //Check for player position
+    void checkDirection()
+    {
+        
+    }
 }

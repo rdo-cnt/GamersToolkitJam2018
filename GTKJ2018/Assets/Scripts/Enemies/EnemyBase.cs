@@ -8,16 +8,13 @@ public class EnemyBase : MonoBehaviour {
     public bool canBeHurt = false;
     public int health = 1;
 
-    //Animation Components
-    protected SpriteRenderer m_sr;
-    protected Animator m_anim;
-    AnimatorStateInfo currentState;
-    protected float playbackTime;
+    //Get Animation Manager
+    protected AnimationManager m_anim;
 
     // Use this for initialization
     void Start () {
-        m_anim = GetComponent<Animator>();
-        m_sr = GetComponent<SpriteRenderer>();
+        //Get Animation Manager
+        m_anim = GetComponent<AnimationManager>();
     }
 	
 	// Update is called once per frame
