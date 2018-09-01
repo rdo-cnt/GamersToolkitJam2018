@@ -11,6 +11,8 @@ public class EnemyBase : MonoBehaviour {
     //Variables
     public bool canBeHurt = false;
     public bool stunned = false;
+    public float stunTimer;
+    public Vector2 knockbackForce;
 
     //Hit and hurtbox components
     public EnemyHurtBox myHurtBox;
@@ -30,9 +32,28 @@ public class EnemyBase : MonoBehaviour {
         //getBoxCollider
         m_rb = GetComponent<Rigidbody2D>();
     }
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+
+    //parry behavior
+    public void OnParried(Transform attackSource)
+    {
+        StartCoroutine(StunTimer());
+
+        //knockback based on direction the attack came from
+        m_rb.AddForce(new Vector2(knockbackForce.x * Mathf.Sign(transform.position.x - attackSource.position.x), knockbackForce.y), ForceMode2D.Impulse);
+
+
+    }
+
+    IEnumerator StunTimer()
+    {
+        stunned = true;
+        float startTime = Time.time;
+        while (startTime - Time.time < stunTimer)
+        {
+            yield return null;
+        }
+        stunned = false;
+
+    }
+
 }

@@ -17,7 +17,9 @@ public class GroundedEnemyController : EnemyBase
     protected bool bRightSideTouch;
     protected bool bLeftSideTouch;
 
-
+    [Tooltip("Assumes the character is facing right")]
+    public Vector2 parry_knockback;
+    public float parry_stunTime;
 
     // Use this for initialization
     protected override void Start () {
@@ -44,6 +46,7 @@ public class GroundedEnemyController : EnemyBase
             changeDirectionLeft(true);
         }
 
+        if (!stunned)
         Movement();
 
     }
@@ -130,5 +133,6 @@ public class GroundedEnemyController : EnemyBase
         }
     }
 
+   
 
 }
