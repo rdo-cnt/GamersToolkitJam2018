@@ -5,9 +5,6 @@ using UnityEngine;
 public class GroundedEnemyController : EnemyBase
 {
 
-    //Get Collision Components
-    protected Rigidbody2D m_rb;
-    protected BoxCollider2D m_col;
 
     //Variable speed
     public float speed = 4f;
@@ -23,13 +20,9 @@ public class GroundedEnemyController : EnemyBase
 
 
     // Use this for initialization
-    void Start () {
-
-        //getBoxCollider
-        m_col = GetComponent<BoxCollider2D>();
-
-        //getBoxCollider
-        m_rb = GetComponent<Rigidbody2D>();
+    protected override void Start () {
+        base.Start();
+        
         m_rb.velocity = new Vector2(-speed, 0);
         changeDirectionLeft(true);
 
