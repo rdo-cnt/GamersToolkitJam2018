@@ -22,7 +22,8 @@ GameObject:
   - component: {fileID: 212605130881315206}
   - component: {fileID: 70642265977694104}
   - component: {fileID: 50439186778388464}
-  m_Layer: 0
+  - component: {fileID: 114102275586808696}
+  m_Layer: 9
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -36,7 +37,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1725544150387136}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.76, y: -2.49, z: 0.16308594}
+  m_LocalPosition: {x: -0.3, y: -3.38, z: 0.16308594}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -56,12 +57,12 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
+  m_GravityScale: 3
+  m_Material: {fileID: 6200000, guid: cb641acc2023de64bbd958465ce7ed70, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
+  m_CollisionDetection: 1
+  m_Constraints: 4
 --- !u!70 &70642265977694104
 CapsuleCollider2D:
   m_ObjectHideFlags: 1
@@ -77,6 +78,27 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: -0.1}
   m_Size: {x: 0.32, y: 0.85}
   m_Direction: 0
+--- !u!114 &114102275586808696
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1725544150387136}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81ca1e54e6a17154cb38d1cfd25940c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  walkSpeed_max: 2.5
+  walkSpeed_acceleration: 40
+  jump_forceInit: 7
+  jump_forceHold: 12
+  jump_airControl: 1
+  groundLayers:
+    serializedVersion: 2
+    m_Bits: 256
+  physMat_ground: {fileID: 6200000, guid: cb641acc2023de64bbd958465ce7ed70, type: 2}
+  physMat_air: {fileID: 6200000, guid: e5df8ebf04180c3429f7b0880b941182, type: 2}
 --- !u!212 &212605130881315206
 SpriteRenderer:
   m_ObjectHideFlags: 1
