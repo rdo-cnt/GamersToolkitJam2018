@@ -18,6 +18,9 @@ public class PlayerController : MonoBehaviour
     public int maxHealth = 7;
     bool isDead = false;
     public AudioSource damageSound;
+
+    //spawnpoint
+    public Vector3 mySpawnPoint;
     
 
     public float walkSpeed_max = 5; // max walking speed
@@ -59,6 +62,8 @@ public class PlayerController : MonoBehaviour
     float invincibilityTimer = .5f;
     float invincibilityStart;
     bool isInvincible;
+
+
 
 
     // Use this for initialization
