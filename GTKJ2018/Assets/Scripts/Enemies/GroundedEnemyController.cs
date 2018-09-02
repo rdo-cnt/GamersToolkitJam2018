@@ -7,7 +7,7 @@ public class GroundedEnemyController : EnemyBase
 
 
     //Variable speed
-    public float speed = 4f;
+    public float speed = 3f;
 
     //Directional Variables
     public bool bFacingLeft;
@@ -21,17 +21,31 @@ public class GroundedEnemyController : EnemyBase
     public Vector2 parry_knockback;
     public float parry_stunTime;
 
+    public bool isActivated = false;
+
     // Use this for initialization
     protected override void Start () {
         base.Start();
         
-        m_rb.velocity = new Vector2(-speed, 0);
+        //m_rb.velocity = new Vector2(-speed, 0);
         changeDirectionLeft(true);
 
     }
 	
 	// Update is called once per frame
 	void Update () {
+
+        if (!isActivated)
+        {
+            if (GameController.instance.levelController)
+            {
+                if (Vector3.Magnitude(this.transform.position - GameController.instance.levelController.playerObject.transform.position) < 9f) //simple as possible activation
+                {
+                    isActivated = true;
+                }
+            }
+            
+        }
 
         //Collisions
         bRightSideTouch = isSided(1.3f);
@@ -46,13 +60,17 @@ public class GroundedEnemyController : EnemyBase
             changeDirectionLeft(true);
         }
 
-        if (!stunned)
-        Movement();
+        if (!stunned && isActivated)
+        {
+            Movement();
+        }
+        
 
     }
 
     void Movement()
     {
+        
         if (bFacingLeft)
         {
             m_rb.velocity = new Vector2(-speed, m_rb.velocity.y);

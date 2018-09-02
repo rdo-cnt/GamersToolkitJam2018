@@ -92,4 +92,10 @@ public class EnemyBase : MonoBehaviour {
 
     }
 
+    public void Die()
+    {
+        GameController.instance.levelController.uiControl.AddScoreNumber(25);
+        Destroy(this.gameObject);
+    }
+
 }
