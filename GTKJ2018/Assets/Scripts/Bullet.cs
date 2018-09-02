@@ -6,7 +6,7 @@ public class Bullet : MonoBehaviour {
 
     public float bulletSpeed = 6f;
     public Vector3 moveDirection = new Vector3(-1, 0, 0);
-    bool isHit = false;
+    public bool isReflected = false;
 
 	// Use this for initialization
 	void Start () {
@@ -23,40 +23,16 @@ public class Bullet : MonoBehaviour {
         this.transform.position += moveDirection * Time.deltaTime * bulletSpeed;
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    public void ReflectBullet()
     {
-        if (!isHit)
+        if (!isReflected)
         {
-            isHit = true;
-            if (collision.gameObject.tag == "Player")
-            {
-                Debug.Log("hit player trigger");
-                collision.gameObject.SendMessage("BulletHit"); //replace with proper call and response for parry
-            }
-            else
-            {
-                //Destroy(this.gameObject);
-            }
-
+            isReflected = true;
+            moveDirection *= -1;
+            this.transform.localScale = new Vector3(this.transform.localScale.x * -1f, 1, 1);
         }
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (!isHit)
-        {
-            isHit = true;
-            if (collision.gameObject.tag == "Player")
-            {
-                Debug.Log("hit player collider");
-                collision.gameObject.SendMessage("BulletHit"); //replace with proper call and response for parry
-            }
-            else
-            {
-                //Destroy(this.gameObject);
-            }
-
-        }
-    }
+    
 
 }
