@@ -86,6 +86,7 @@ public class LevelTransition : MonoBehaviour {
             moveTarget = pControl;
             
             StartWalkToBegin();
+            moveTarget.MakeLevelEndInvincible();
 
         }
     }

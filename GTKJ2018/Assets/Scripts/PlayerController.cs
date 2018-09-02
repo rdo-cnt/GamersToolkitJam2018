@@ -343,6 +343,11 @@ public class PlayerController : MonoBehaviour
         
     }
 
+    public void MakeLevelEndInvincible()
+    {
+        isInvincible = true;
+    }
+
     
 
 }
