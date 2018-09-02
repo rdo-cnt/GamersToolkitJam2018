@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class GunFire : EnemyBase {
 
+
+    public EnemySpawner mySpawner;
     public ParticleSystem main;
     public ParticleSystem secondary;
     public GameObject bulletPrefab;
@@ -106,11 +108,21 @@ public class GunFire : EnemyBase {
     }
 
 
+    public void Init()
+    {
+        stunned = false;
+        hitByBullet = false;
+        StopFiring();
+        
+    }
+
     void Explode()
     {
         Instantiate(explosionPrefab, transform.position, transform.rotation);
         Instantiate(runnerPrefab, transform.position, transform.rotation);
-        Destroy(gameObject);
+        //Destroy(gameObject);
+        this.gameObject.SetActive(false);
+        mySpawner.enemyDeployed = false;
 
     }
 

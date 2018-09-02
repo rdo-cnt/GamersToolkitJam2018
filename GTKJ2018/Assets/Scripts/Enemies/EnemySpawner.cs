@@ -8,6 +8,7 @@ public class EnemySpawner : MonoBehaviour {
     public List<EnemyFlierController> myFlyingEnemiesList;
     public EnemyFlierController myFlyingEnemy;
     public GroundedEnemyController myWalkingEnemy;
+    public GunFire myShooterEnemy;
     public Vector3 initialPos;
     public bool enemyDeployed;
     public bool canDeploy;
@@ -32,6 +33,13 @@ public class EnemySpawner : MonoBehaviour {
             myWalkingEnemy.enabled = false;
             myWalkingEnemy.mySpawner = this;
             initialPos = myWalkingEnemy.transform.position;
+        }
+        if (myShooterEnemy)
+        {
+            myShooterEnemy.gameObject.SetActive(false);
+            myShooterEnemy.enabled = false;
+            myShooterEnemy.mySpawner = this;
+            initialPos = myShooterEnemy.transform.position;
         }
         
 	}
@@ -93,7 +101,15 @@ public class EnemySpawner : MonoBehaviour {
                 enemyDeployed = true;
                 myWalkingEnemy.InitMovement();
             }
-            
+            if (myShooterEnemy)
+            {
+                myShooterEnemy.transform.position = initialPos;
+                if (!myShooterEnemy.enabled)
+                    myShooterEnemy.enabled = true;
+                myShooterEnemy.gameObject.SetActive(true);
+                enemyDeployed = true;
+                myShooterEnemy.Init();
+            }
         }
 	}
 
