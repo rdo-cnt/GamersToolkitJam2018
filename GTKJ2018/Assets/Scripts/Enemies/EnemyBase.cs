@@ -21,6 +21,9 @@ public class EnemyBase : MonoBehaviour {
     //Get Animation Manager
     protected AnimationManager m_anim;
 
+    //stun graphic
+    public ParticleSystem stunAnim;
+
     // Use this for initialization
     protected virtual void Start () {
         //Get Animation Manager
@@ -52,12 +55,17 @@ public class EnemyBase : MonoBehaviour {
     IEnumerator StunTimer()
     {
         stunned = true;
+        stunAnim.gameObject.SetActive(true);
+        stunAnim.Play();
         float startTime = Time.time;
         while (Time.time - startTime < stunTimer)
         {
             yield return new WaitForFixedUpdate();
         }
         stunned = false;
+        stunAnim.Stop();
+        stunAnim.gameObject.SetActive(false);
+        
 
     }
 
