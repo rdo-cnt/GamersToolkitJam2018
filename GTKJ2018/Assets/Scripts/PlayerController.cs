@@ -166,7 +166,7 @@ public class PlayerController : MonoBehaviour
             if (hits.Length > 0) // if you parry anything
             {
                 hitSomething = true;
-
+                GameController.instance.levelController.uiControl.AddScoreNumber(15);
                 foreach (Collider2D col in hits)
                 {
                     Debug.Log("hits at " + col.gameObject.name);
