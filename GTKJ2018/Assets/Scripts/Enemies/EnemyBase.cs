@@ -48,7 +48,7 @@ public class EnemyBase : MonoBehaviour {
     //parry behavior
     public void OnParried(Transform attackSource)
     {
-
+        Debug.Log("was parried");
         if (attackBoxCollider != null && attackBoxCollider.enabled)
         {
             StartCoroutine(DisableHitBoxTimer());
@@ -84,6 +84,7 @@ public class EnemyBase : MonoBehaviour {
 
     IEnumerator StunTimer()
     {
+        Debug.Log("doing stun timer");
         stunned = true;
         stunAnim.gameObject.SetActive(true);
         stunAnim.Play();

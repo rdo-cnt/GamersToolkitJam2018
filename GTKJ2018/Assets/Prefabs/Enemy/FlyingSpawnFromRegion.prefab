@@ -147,7 +147,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1795093674864370}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 4.9699993, y: -0.83, z: 0.01953125}
+  m_LocalPosition: {x: 0.57, y: -1.97, z: 0.01953125}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4312164777533630}
@@ -298,12 +298,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 27fbd4b410aa5a74ab3daca2843ec111, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  myFlyingEnemiesList: []
   myFlyingEnemy: {fileID: 114480757507063578}
   myWalkingEnemy: {fileID: 0}
   initialPos: {x: 0, y: 0, z: 0}
   enemyDeployed: 0
   canDeploy: 0
   isConstantRegion: 1
+  maxSpawnsAtOnce: 4
+  spawnDelay: 3
 --- !u!114 &114186305944475676
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -330,11 +333,14 @@ MonoBehaviour:
   hitboxDisableTimer: 0.5
   attackBoxCollider: {fileID: 0}
   stunned: 0
-  stunTimer: 0
+  stunTimer: 2
   knockbackForce: {x: 0, y: 0}
   hurtBox: {fileID: 0}
   attackBox: {fileID: 0}
   stunAnim: {fileID: 198577402991449910}
+  whatIsGround:
+    serializedVersion: 2
+    m_Bits: 0
   mySpawner: {fileID: 0}
   speed: 2
   direction: -1
