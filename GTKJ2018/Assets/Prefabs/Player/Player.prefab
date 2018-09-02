@@ -294,13 +294,12 @@ MonoBehaviour:
   groundLayers:
     serializedVersion: 2
     m_Bits: 256
+  parryRadius: 0.51
   parryTime: 1
   parryBounceForce: 10
   parryLayers:
     serializedVersion: 2
     m_Bits: 3072
-  parryOffset: {x: 0.5, y: 0}
-  parryHitboxSize: {x: 0.5, y: 1.5}
   parrySoundEffect: {fileID: 82812800268749548}
   physMat_ground: {fileID: 6200000, guid: cb641acc2023de64bbd958465ce7ed70, type: 2}
   physMat_air: {fileID: 6200000, guid: e5df8ebf04180c3429f7b0880b941182, type: 2}
