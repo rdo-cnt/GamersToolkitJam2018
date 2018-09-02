@@ -88,6 +88,11 @@ public class GunFire : EnemyBase {
                 stopIt = true;
                 return;
             }
+            if (stunned || hitByBullet)
+            {
+                stopIt = true;
+                return;
+            }
             if (firingStart + firingDelay < Time.time && !isFiringReal)
             {
                 Debug.Log("setting firing real");
