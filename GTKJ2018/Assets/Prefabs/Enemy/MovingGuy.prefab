@@ -275,7 +275,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 256
   mySpawner: {fileID: 0}
-  speed: 5
+  speed: 3
   bFacingLeft: 0
   parry_knockback: {x: 0, y: 0}
   parry_stunTime: 0

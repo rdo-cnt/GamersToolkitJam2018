@@ -28,6 +28,7 @@ public class EnemyHitBox : MonoBehaviour
         bool enemyTest = false;
         if (this.transform.parent.GetComponent<Bullet>()) //gonna be ugly here but make it so
         {
+            Debug.Log("<color=red>I AM A BULLET</color>");
             Bullet bullet = this.transform.parent.GetComponent<Bullet>();
             if (bullet.isReflected)
             {

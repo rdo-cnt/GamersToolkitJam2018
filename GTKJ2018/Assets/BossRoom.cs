@@ -28,7 +28,7 @@ public class BossRoom : MonoBehaviour {
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log("got trigger enter from " + collision.gameObject.name);
+        //Debug.Log("got trigger enter from " + collision.gameObject.name);
         if (collision.GetComponent<GroundedEnemyController>() || collision.GetComponent<PlayerController>())
         {
             MoveObjectToTop(collision.gameObject);
@@ -45,8 +45,8 @@ public class BossRoom : MonoBehaviour {
     {
         if (healthTrigger == 6)
         {
-            GameObject newSpawn = Instantiate(mobSpawnPrefab);
-            newSpawn.transform.position = mobSpawn1.transform.position;
+            //GameObject newSpawn = Instantiate(mobSpawnPrefab);
+            //newSpawn.transform.position = mobSpawn1.transform.position;
         }
         if (healthTrigger == 5)
         {
@@ -66,8 +66,8 @@ public class BossRoom : MonoBehaviour {
         }
         if (healthTrigger == 2)
         {
-            GameObject newSpawn = Instantiate(mobSpawnPrefab);
-            newSpawn.transform.position = mobSpawn2.transform.position;
+            //GameObject newSpawn = Instantiate(mobSpawnPrefab);
+            //newSpawn.transform.position = mobSpawn2.transform.position;
         }
         if (healthTrigger == 1)
         {
@@ -77,7 +77,7 @@ public class BossRoom : MonoBehaviour {
         }
         if (healthTrigger == 0) //finish 
         {
-
+            GameController.nextScene();
         }
     }
 
