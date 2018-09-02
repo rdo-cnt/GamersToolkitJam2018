@@ -53,6 +53,9 @@ public class PlayerController : MonoBehaviour
     public PhysicsMaterial2D physMat_ground;
     public PhysicsMaterial2D physMat_air; // having no friction in the air keeps you from sliding on walls
 
+    public Sprite sprite_idle;
+    public Sprite sprite_idleParry;
+
     float invincibilityTimer = .5f;
     float invincibilityStart;
     bool isInvincible;
@@ -129,6 +132,7 @@ public class PlayerController : MonoBehaviour
         isParrying = true; //make sure you can't parry while you parry
         float startTime = Time.time; //grabbing the time to compare to later
         parrySoundEffect.Play();
+        sprite.sprite = sprite_idleParry;
 
         if (!isGrounded)
             parry_inAir = true;
@@ -186,6 +190,7 @@ public class PlayerController : MonoBehaviour
                     ParryBounce(); //bounce off of what you parried
                 }
                 isParrying = false;
+                sprite.sprite = sprite_idle;
                 yield break;
             }
             
@@ -194,6 +199,7 @@ public class PlayerController : MonoBehaviour
 
         }
         isParrying = false;
+        sprite.sprite = sprite_idle;
 
         if (!parry_inAir && !hitSomething)
         {
