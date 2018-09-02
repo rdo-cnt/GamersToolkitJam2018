@@ -76,18 +76,30 @@ public class EnemyFlierController : EnemyBase {
         if (sinWaveMotion)
         {
             
-            sinLerp += sinMovement * sinWaveSpeed * Time.deltaTime;
-            float sinLerpBase = Mathf.Sin(sinLerp);
             
-
-            if (sinLerpBase >= 0)
+            
+            if (!stunned)
             {
-                this.transform.position = new Vector3(this.transform.position.x, Mathf.Lerp(startPos.y, startPos.y + sinWaveMagnitude, sinLerpBase), this.transform.position.z);
+                //whatIsGround = LayerMask.NameToLayer("Nothing");
+                m_rb.gravityScale = 0.0f;
+                sinLerp += sinMovement * sinWaveSpeed * Time.deltaTime;
+                float sinLerpBase = Mathf.Sin(sinLerp);
+                if (sinLerpBase >= 0)
+                {
+                    this.transform.position = new Vector3(this.transform.position.x, Mathf.Lerp(startPos.y, startPos.y + sinWaveMagnitude, sinLerpBase), this.transform.position.z);
+                }
+                else
+                {
+                    this.transform.position = new Vector3(this.transform.position.x, Mathf.Lerp(startPos.y, startPos.y - sinWaveMagnitude, -sinLerpBase), this.transform.position.z);
+                }
             }
             else
             {
-                this.transform.position = new Vector3(this.transform.position.x, Mathf.Lerp(startPos.y, startPos.y - sinWaveMagnitude, -sinLerpBase), this.transform.position.z);
+                m_rb.gravityScale = 10.0f;
+                startPos = this.transform.position;
+                //whatIsGround = LayerMask.NameToLayer("Ground");
             }
+            
 
             
            
