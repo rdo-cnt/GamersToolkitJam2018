@@ -10,6 +10,9 @@ public class LevelController : MonoBehaviour {
     public CMCamManager camManager;
     public UIController uiControl;
 
+    public bool setCamOffset = false;
+    public Vector2 offset;
+
     public float playerRespawnTime = 3.0f;
     float playerRespawnStart;
     bool isRespawning = false;
@@ -45,9 +48,23 @@ public class LevelController : MonoBehaviour {
         if (!playerObject && playerPrefab)
         {
             playerObject = GameObject.Instantiate(playerPrefab);
+            GameObject camOffsetObject = new GameObject();
+
+           
+
             playerObject.transform.position = spawnLocation.position;
             camManager.SetFollowTarget(playerObject.transform);
             uiControl.SetPlayerHearts(7);
+
+            if (setCamOffset)
+            {
+                camOffsetObject.transform.parent = playerObject.transform;
+                camOffsetObject.transform.position = playerObject.transform.position + (Vector3)offset;
+                camManager.SetFollowTarget(camOffsetObject.transform);
+
+            }
+            else
+                Destroy(camOffsetObject);
         }
 
         
