@@ -343,7 +343,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canBeHurt: 0
-  hitboxDisableTimer: 1
+  hitboxDisableTimer: 2
   attackBoxCollider: {fileID: 61074688218171260}
   stunned: 0
   stunTimer: 2

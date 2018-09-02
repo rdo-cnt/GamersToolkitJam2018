@@ -118,7 +118,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1393775585965408}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 21.54, y: -2.46, z: 0.01953125}
+  m_LocalPosition: {x: 19.37, y: -1.32, z: 0.01953125}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4858567151645842}
@@ -145,7 +145,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1804359173423554}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -15, y: 2.8, z: 0.14453125}
+  m_LocalPosition: {x: -15.36, y: -0.52, z: 0.14453125}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4901591721301146}
@@ -343,10 +343,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canBeHurt: 0
-  hitboxDisableTimer: 1
+  hitboxDisableTimer: 2
   attackBoxCollider: {fileID: 61373026462341750}
   stunned: 0
-  stunTimer: 0
+  stunTimer: 2
   knockbackForce: {x: 0, y: 0}
   hurtBox: {fileID: 0}
   attackBox: {fileID: 0}

@@ -147,7 +147,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1795093674864370}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.57, y: -1.97, z: 0.01953125}
+  m_LocalPosition: {x: 46.9, y: -0.8, z: 0.01953125}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4312164777533630}
@@ -330,8 +330,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canBeHurt: 0
-  hitboxDisableTimer: 0.5
-  attackBoxCollider: {fileID: 0}
+  hitboxDisableTimer: 2
+  attackBoxCollider: {fileID: 61719728380919684}
   stunned: 0
   stunTimer: 2
   knockbackForce: {x: 0, y: 0}
