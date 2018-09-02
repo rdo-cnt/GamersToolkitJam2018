@@ -126,7 +126,14 @@ public class DrNekoBoss : MonoBehaviour {
         }
         else if (moveState == 4) //firing 2
         {
-            
+            if (GameController.instance.levelController.playerObject.transform.position.x < this.transform.position.x)
+            {
+                this.transform.localScale = new Vector3(1.0f, 1.0f, 1.0f);
+            }
+            else
+            {
+                this.transform.localScale = new Vector3(-1.0f, 1.0f, 1.0f);
+            }
             FireLaser();
             moveState = 5;
             currentLastTime = Time.time;
@@ -146,6 +153,7 @@ public class DrNekoBoss : MonoBehaviour {
             if (currentLastTime + delayWhenStun < Time.time)
             {
                 ResetMoves();
+                moveState = 1;
                 stunAnim.Stop();
                 stunAnim.gameObject.SetActive(false);
                 TriggerNextEnemy();
@@ -184,7 +192,13 @@ public class DrNekoBoss : MonoBehaviour {
         currentLastTime = Time.time;
         moveState = 6;
         currentHealth--;
+        GameController.instance.levelController.uiControl.AddScoreNumber(50);
+        if (currentHealth == 0)
+        {
+            GameController.instance.levelController.uiControl.AddScoreNumber(5000);
+        }
         GameController.instance.levelController.uiControl.SetEnemyHearts(currentHealth);
+        
 
     }
 
