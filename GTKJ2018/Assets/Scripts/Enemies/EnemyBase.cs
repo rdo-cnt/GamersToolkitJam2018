@@ -86,16 +86,24 @@ public class EnemyBase : MonoBehaviour {
     {
         Debug.Log("doing stun timer");
         stunned = true;
-        stunAnim.gameObject.SetActive(true);
-        stunAnim.Play();
+        if (stunAnim)
+        {
+            stunAnim.gameObject.SetActive(true);
+            stunAnim.Play();
+        }
+        
         float startTime = Time.time;
         while (Time.time - startTime < stunTimer)
         {
             yield return null;
         }
         stunned = false;
-        stunAnim.Stop();
-        stunAnim.gameObject.SetActive(false);
+        if (stunAnim)
+        {
+            stunAnim.Stop();
+            stunAnim.gameObject.SetActive(false);
+        }
+        
         
 
     }
