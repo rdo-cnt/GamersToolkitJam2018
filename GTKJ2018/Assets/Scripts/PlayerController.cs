@@ -34,14 +34,15 @@ public class PlayerController : MonoBehaviour
     private bool parryInput;
 
     private bool isParrying;
-    //commented out the radius in case we go back to full round parry.
-    //public float parryRadius; //radius of where your parry effects
+
+    public float parryRadius; //radius of where your parry effects
     public float parryTime; //how long does the parry last?
     public float parryBounceForce; //how high can you bounce off enemies?
     public LayerMask parryLayers; // what can you parry?
-    public Vector2 parryOffset; // how far forward is the hitbox
-    public Vector2 parryHitboxSize; // how big is the hitbox
+    //public Vector2 parryOffset; // how far forward is the hitbox
+    //public Vector2 parryHitboxSize; // how big is the hitbox
     public AudioSource parrySoundEffect; //sound to play when parrying
+    
 
     private Rigidbody2D rb; //components we'll be messing with
     private Collider2D colli;
@@ -108,15 +109,15 @@ public class PlayerController : MonoBehaviour
     void OnDrawGizmos()
     {
 
-        Gizmos.color = Color.blue;
-        if (isParrying)
-        {
-            if (sprite.flipX == false)
-                Gizmos.DrawCube(transform.position + (Vector3)parryOffset, parryHitboxSize);
-            else
-                Gizmos.DrawCube(transform.position - (Vector3)parryOffset, parryHitboxSize);
+        //Gizmos.color = Color.blue;
+        //if (isParrying)
+        //{
+        //    if (sprite.flipX == false)
+        //        Gizmos.DrawCube(transform.position + (Vector3)parryOffset, parryHitboxSize);
+        //    else
+        //        Gizmos.DrawCube(transform.position - (Vector3)parryOffset, parryHitboxSize);
 
-        }
+        //}
 
     }
 
@@ -130,24 +131,24 @@ public class PlayerController : MonoBehaviour
 
         while (Time.time - startTime < parryTime) //loop this for <parryTime> seconds
         {
-            // Collider2D[] hits = Physics2D.OverlapCircleAll(transform.position, parryRadius, parryLayers); //grabbing everything hit
+            Collider2D[] hits = Physics2D.OverlapCircleAll(transform.position, parryRadius, parryLayers); //grabbing everything hit
 
-            Collider2D[] hits = new Collider2D[0];
+            //Collider2D[] hits = new Collider2D[0];
 
-            if (sprite.flipX == true) // parry either left or right, depending on the sprite's direction
-                hits = Physics2D.OverlapBoxAll(rb.position - parryOffset, parryHitboxSize, 0, parryLayers);
-            else
-                hits = Physics2D.OverlapBoxAll(rb.position + parryOffset, parryHitboxSize, 0, parryLayers);
+            //if (sprite.flipX == true) // parry either left or right, depending on the sprite's direction
+            //    hits = Physics2D.OverlapBoxAll(rb.position - parryOffset, parryHitboxSize, 0, parryLayers);
+            //else
+            //    hits = Physics2D.OverlapBoxAll(rb.position + parryOffset, parryHitboxSize, 0, parryLayers);
 
-            Collider2D[] underHits = new Collider2D[0];
+            //Collider2D[] underHits = new Collider2D[0];
 
-            if (!isGrounded)
-                underHits = Physics2D.OverlapBoxAll(rb.position + Vector2.down * 0.5f, new Vector2(1, 0.25f), 0, parryLayers); // small hitbox under the player just for bouncing
+            //if (!isGrounded)
+            //    underHits = Physics2D.OverlapBoxAll(rb.position + Vector2.down * 0.5f, new Vector2(1, 0.25f), 0, parryLayers); // small hitbox under the player just for bouncing
 
-            if (underHits.Length > 0)
-            {
-                ParryBounce();
-            }
+            //if (underHits.Length > 0)
+            //{
+            //    ParryBounce();
+            //}
 
 
             if (hits.Length > 0) // if you parry anything
@@ -220,7 +221,10 @@ public class PlayerController : MonoBehaviour
 
         if (!isGrounded && !jump_airControl) // if we have no air control, do not move in the air
             return;
-        
+
+        if (isGrounded && isParrying)
+            return;
+
         float moveInput = Input.GetAxisRaw("Horizontal"); //grabing input
         if (isDead || !controllable) //cant move while dead or has no control.
         {
