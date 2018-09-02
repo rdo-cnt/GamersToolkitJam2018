@@ -4,9 +4,13 @@ using UnityEngine;
 
 public class DrNekoBoss : MonoBehaviour {
 
+    public BossRoom bossRoom;
     public Transform[] movePositions;
     public GameObject laserPrefab;
     public Transform laserGunHole;
+
+    public ParticleSystem stunAnim;
+    int currentHealth = 7;
 
     int targetMovePos;
     int moveState = 0;
@@ -18,7 +22,7 @@ public class DrNekoBoss : MonoBehaviour {
 
     float delayBeforeFire = 1.0f;
     float delayAfterFire = 1.0f;
-    float delayWhenStun = 1.0f;
+    float delayWhenStun = 4.0f;
 
     float delayBeforeChainMoving = 1.5f;
     float delayBeforeStartMoving = 2.5f;
@@ -36,6 +40,9 @@ public class DrNekoBoss : MonoBehaviour {
         thisSpriteRenderer.color = new Color(thisSpriteRenderer.color.r, thisSpriteRenderer.color.g, thisSpriteRenderer.color.b, 0.0f);
         currentLastTime = Time.time;
         moveLerp = 0.0f;
+        stunAnim.Stop();
+        stunAnim.gameObject.SetActive(false);
+        
 	}
 	
 	// Update is called once per frame
@@ -49,7 +56,7 @@ public class DrNekoBoss : MonoBehaviour {
                 {
                     moveState = 1;
                     targetMovePos = Random.Range(0, movePositions.Length);
-                    GameController.instance.levelController.uiControl.SetEnemyHearts(7);
+                    GameController.instance.levelController.uiControl.SetEnemyHearts(currentHealth);
                 }
                 else
                 {
@@ -65,6 +72,14 @@ public class DrNekoBoss : MonoBehaviour {
             moveLerp += moveSpeed * Time.deltaTime;
             
             this.transform.position = Vector3.Lerp(lastPosition, movePositions[targetMovePos].transform.position, moveLerp);
+            if (lastPosition.x < movePositions[targetMovePos].transform.position.x)
+            {
+                this.transform.localScale = new Vector3(-1.0f, 1.0f, 1.0f);
+            }
+            else
+            {
+                this.transform.localScale = new Vector3(1.0f, 1.0f, 1.0f);
+            }
             if (moveLerp >= 1.0f)
             {
                 
@@ -126,6 +141,17 @@ public class DrNekoBoss : MonoBehaviour {
                 
             }
         }
+        else if (moveState == 6)// took damage
+        {
+            if (currentLastTime + delayWhenStun < Time.time)
+            {
+                ResetMoves();
+                stunAnim.Stop();
+                stunAnim.gameObject.SetActive(false);
+                TriggerNextEnemy();
+            }
+            
+        }
 
 
 
@@ -145,7 +171,29 @@ public class DrNekoBoss : MonoBehaviour {
         GameObject newLaserShot = Instantiate(laserPrefab, laserGunHole);
         newLaserShot.transform.localPosition = new Vector3(0, 0, 0);
         newLaserShot.transform.parent = null;
+        if (this.transform.localScale.x <= 0.0f)
+        {
+            newLaserShot.GetComponent<Bullet>().FlipDirection();
+        }
     }
+
+    public void TakeDamage() //called when hit from laser reflection
+    {
+        stunAnim.gameObject.SetActive(true);
+        stunAnim.Play();
+        currentLastTime = Time.time;
+        moveState = 6;
+        currentHealth--;
+        GameController.instance.levelController.uiControl.SetEnemyHearts(currentHealth);
+
+    }
+
+    void TriggerNextEnemy()
+    {
+        bossRoom.TriggerNext(currentHealth);
+    }
+
+
 
 
 }

@@ -7,6 +7,7 @@ public class Bullet : MonoBehaviour {
     public float bulletSpeed = 6f;
     public Vector3 moveDirection = new Vector3(-1, 0, 0);
     public bool isReflected = false;
+    bool isHit = false;
 
     public float hitboxDisabledForSeconds; //disable hitbox for a brief moment so the enemy doesn't shoot himself.
     public Collider2D hitbox;
@@ -48,14 +49,31 @@ public class Bullet : MonoBehaviour {
         if (!isReflected)
         {
             isReflected = true;
-            moveDirection *= -1;
-            this.transform.localScale = new Vector3(this.transform.localScale.x * -1f, 1, 1);
+            FlipDirection();
+            
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        Debug.Log("triggered with " + collision.gameObject.name);
+        if (collision.gameObject.GetComponent<DrNekoBoss>() && !isHit)
+        {
+            collision.gameObject.GetComponent<DrNekoBoss>().TakeDamage();
+            isHit = true;
+            Destroy(this.gameObject);
         }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
         Destroy(this.gameObject);
+    }
+
+    public void FlipDirection()
+    {
+        moveDirection *= -1;
+        this.transform.localScale = new Vector3(this.transform.localScale.x * -1f, 1, 1);
     }
 
 

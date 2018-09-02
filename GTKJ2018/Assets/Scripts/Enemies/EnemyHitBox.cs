@@ -23,6 +23,7 @@ public class EnemyHitBox : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
+        Debug.Log("I entered with " + other.gameObject.name);
         bool playerTest = true;
         bool enemyTest = false;
         if (this.transform.parent.GetComponent<Bullet>()) //gonna be ugly here but make it so
