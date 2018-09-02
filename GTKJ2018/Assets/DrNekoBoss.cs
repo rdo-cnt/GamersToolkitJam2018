@@ -33,6 +33,11 @@ public class DrNekoBoss : MonoBehaviour {
 
     float currentLastTime;
 
+
+    public AudioSource laserSound;
+    public AudioSource damagedSound;
+    public AudioSource damagedSound2;
+
 	// Use this for initialization
 	void Start ()
     {
@@ -176,6 +181,7 @@ public class DrNekoBoss : MonoBehaviour {
 
     void FireLaser()
     {
+        laserSound.Play();
         GameObject newLaserShot = Instantiate(laserPrefab, laserGunHole);
         newLaserShot.transform.localPosition = new Vector3(0, 0, 0);
         newLaserShot.transform.parent = null;
@@ -187,6 +193,9 @@ public class DrNekoBoss : MonoBehaviour {
 
     public void TakeDamage() //called when hit from laser reflection
     {
+        damagedSound.Play();
+        damagedSound2.Play();
+
         stunAnim.gameObject.SetActive(true);
         stunAnim.Play();
         currentLastTime = Time.time;
