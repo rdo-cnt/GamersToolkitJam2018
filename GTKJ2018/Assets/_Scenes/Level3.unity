@@ -175,6 +175,16 @@ Prefab:
       propertyPath: hitboxDisableTimer
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 199526705384825862, guid: bb18ebaa7cc7d644ebbb893b77ed636d,
+        type: 2}
+      propertyPath: m_SortingLayerID
+      value: 1513449901
+      objectReference: {fileID: 0}
+    - target: {fileID: 199526705384825862, guid: bb18ebaa7cc7d644ebbb893b77ed636d,
+        type: 2}
+      propertyPath: m_SortingLayer
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bb18ebaa7cc7d644ebbb893b77ed636d, type: 2}
   m_IsPrefabAsset: 0
@@ -217,28 +227,9 @@ Prefab:
       propertyPath: m_RootOrder
       value: 42
       objectReference: {fileID: 0}
-    - target: {fileID: 4903041113276004, guid: bb18ebaa7cc7d644ebbb893b77ed636d, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 2.78
-      objectReference: {fileID: 0}
-    - target: {fileID: 61316020363043520, guid: bb18ebaa7cc7d644ebbb893b77ed636d,
-        type: 2}
-      propertyPath: m_Size.y
-      value: 8.18
-      objectReference: {fileID: 0}
-    - target: {fileID: 61316020363043520, guid: bb18ebaa7cc7d644ebbb893b77ed636d,
-        type: 2}
-      propertyPath: m_Size.x
-      value: 2.27
-      objectReference: {fileID: 0}
     - target: {fileID: 1121198744446240, guid: bb18ebaa7cc7d644ebbb893b77ed636d, type: 2}
       propertyPath: m_Name
       value: FlyingSpawn (23)
-      objectReference: {fileID: 0}
-    - target: {fileID: 114948817887811886, guid: bb18ebaa7cc7d644ebbb893b77ed636d,
-        type: 2}
-      propertyPath: hitboxDisableTimer
-      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bb18ebaa7cc7d644ebbb893b77ed636d, type: 2}
@@ -303,6 +294,16 @@ Prefab:
     - target: {fileID: 114948817887811886, guid: bb18ebaa7cc7d644ebbb893b77ed636d,
         type: 2}
       propertyPath: hitboxDisableTimer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 199526705384825862, guid: bb18ebaa7cc7d644ebbb893b77ed636d,
+        type: 2}
+      propertyPath: m_SortingLayerID
+      value: 1513449901
+      objectReference: {fileID: 0}
+    - target: {fileID: 199526705384825862, guid: bb18ebaa7cc7d644ebbb893b77ed636d,
+        type: 2}
+      propertyPath: m_SortingLayer
       value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -444,6 +445,16 @@ Prefab:
       propertyPath: m_Name
       value: MovingSpawn (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 199242782861546810, guid: 079eb0a913f39d34e87c86812cc0e27e,
+        type: 2}
+      propertyPath: m_SortingLayerID
+      value: 1513449901
+      objectReference: {fileID: 0}
+    - target: {fileID: 199242782861546810, guid: 079eb0a913f39d34e87c86812cc0e27e,
+        type: 2}
+      propertyPath: m_SortingLayer
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 079eb0a913f39d34e87c86812cc0e27e, type: 2}
   m_IsPrefabAsset: 0
@@ -489,24 +500,6 @@ Prefab:
     - target: {fileID: 1393775585965408, guid: c517bdaacfad72e4eb51f53f55370c53, type: 2}
       propertyPath: m_Name
       value: FlyingSpawnFromLeft (10)
-      objectReference: {fileID: 0}
-    - target: {fileID: 4858567151645842, guid: c517bdaacfad72e4eb51f53f55370c53, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 3.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 4858567151645842, guid: c517bdaacfad72e4eb51f53f55370c53, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: -15.36
-      objectReference: {fileID: 0}
-    - target: {fileID: 114876149866635534, guid: c517bdaacfad72e4eb51f53f55370c53,
-        type: 2}
-      propertyPath: stunTimer
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 114876149866635534, guid: c517bdaacfad72e4eb51f53f55370c53,
-        type: 2}
-      propertyPath: hitboxDisableTimer
-      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c517bdaacfad72e4eb51f53f55370c53, type: 2}
@@ -571,6 +564,16 @@ Prefab:
     - target: {fileID: 114948817887811886, guid: bb18ebaa7cc7d644ebbb893b77ed636d,
         type: 2}
       propertyPath: hitboxDisableTimer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 199526705384825862, guid: bb18ebaa7cc7d644ebbb893b77ed636d,
+        type: 2}
+      propertyPath: m_SortingLayerID
+      value: 1513449901
+      objectReference: {fileID: 0}
+    - target: {fileID: 199526705384825862, guid: bb18ebaa7cc7d644ebbb893b77ed636d,
+        type: 2}
+      propertyPath: m_SortingLayer
       value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -685,6 +688,16 @@ Prefab:
       propertyPath: hitboxDisableTimer
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 199158525747617872, guid: c517bdaacfad72e4eb51f53f55370c53,
+        type: 2}
+      propertyPath: m_SortingLayerID
+      value: 1513449901
+      objectReference: {fileID: 0}
+    - target: {fileID: 199158525747617872, guid: c517bdaacfad72e4eb51f53f55370c53,
+        type: 2}
+      propertyPath: m_SortingLayer
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c517bdaacfad72e4eb51f53f55370c53, type: 2}
   m_IsPrefabAsset: 0
@@ -730,6 +743,16 @@ Prefab:
     - target: {fileID: 1283699145336814, guid: 079eb0a913f39d34e87c86812cc0e27e, type: 2}
       propertyPath: m_Name
       value: MovingSpawn (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 199242782861546810, guid: 079eb0a913f39d34e87c86812cc0e27e,
+        type: 2}
+      propertyPath: m_SortingLayerID
+      value: 1513449901
+      objectReference: {fileID: 0}
+    - target: {fileID: 199242782861546810, guid: 079eb0a913f39d34e87c86812cc0e27e,
+        type: 2}
+      propertyPath: m_SortingLayer
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 079eb0a913f39d34e87c86812cc0e27e, type: 2}
@@ -900,6 +923,16 @@ Prefab:
       propertyPath: hitboxDisableTimer
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 199526705384825862, guid: bb18ebaa7cc7d644ebbb893b77ed636d,
+        type: 2}
+      propertyPath: m_SortingLayerID
+      value: 1513449901
+      objectReference: {fileID: 0}
+    - target: {fileID: 199526705384825862, guid: bb18ebaa7cc7d644ebbb893b77ed636d,
+        type: 2}
+      propertyPath: m_SortingLayer
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bb18ebaa7cc7d644ebbb893b77ed636d, type: 2}
   m_IsPrefabAsset: 0
@@ -964,6 +997,16 @@ Prefab:
       propertyPath: hitboxDisableTimer
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 199158525747617872, guid: c517bdaacfad72e4eb51f53f55370c53,
+        type: 2}
+      propertyPath: m_SortingLayerID
+      value: 1513449901
+      objectReference: {fileID: 0}
+    - target: {fileID: 199158525747617872, guid: c517bdaacfad72e4eb51f53f55370c53,
+        type: 2}
+      propertyPath: m_SortingLayer
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c517bdaacfad72e4eb51f53f55370c53, type: 2}
   m_IsPrefabAsset: 0
@@ -1019,6 +1062,16 @@ Prefab:
     - target: {fileID: 1393775585965408, guid: c517bdaacfad72e4eb51f53f55370c53, type: 2}
       propertyPath: m_Name
       value: FlyingSpawnFromLeft (17)
+      objectReference: {fileID: 0}
+    - target: {fileID: 199158525747617872, guid: c517bdaacfad72e4eb51f53f55370c53,
+        type: 2}
+      propertyPath: m_SortingLayerID
+      value: 1513449901
+      objectReference: {fileID: 0}
+    - target: {fileID: 199158525747617872, guid: c517bdaacfad72e4eb51f53f55370c53,
+        type: 2}
+      propertyPath: m_SortingLayer
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c517bdaacfad72e4eb51f53f55370c53, type: 2}
@@ -1081,6 +1134,16 @@ Prefab:
       propertyPath: hitboxDisableTimer
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 199526705384825862, guid: bb18ebaa7cc7d644ebbb893b77ed636d,
+        type: 2}
+      propertyPath: m_SortingLayerID
+      value: 1513449901
+      objectReference: {fileID: 0}
+    - target: {fileID: 199526705384825862, guid: bb18ebaa7cc7d644ebbb893b77ed636d,
+        type: 2}
+      propertyPath: m_SortingLayer
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bb18ebaa7cc7d644ebbb893b77ed636d, type: 2}
   m_IsPrefabAsset: 0
@@ -1122,6 +1185,16 @@ Prefab:
     - target: {fileID: 4249936798813878, guid: 079eb0a913f39d34e87c86812cc0e27e, type: 2}
       propertyPath: m_RootOrder
       value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 199242782861546810, guid: 079eb0a913f39d34e87c86812cc0e27e,
+        type: 2}
+      propertyPath: m_SortingLayerID
+      value: 1513449901
+      objectReference: {fileID: 0}
+    - target: {fileID: 199242782861546810, guid: 079eb0a913f39d34e87c86812cc0e27e,
+        type: 2}
+      propertyPath: m_SortingLayer
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 079eb0a913f39d34e87c86812cc0e27e, type: 2}
@@ -1235,6 +1308,16 @@ Prefab:
       propertyPath: hitboxDisableTimer
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 199526705384825862, guid: bb18ebaa7cc7d644ebbb893b77ed636d,
+        type: 2}
+      propertyPath: m_SortingLayerID
+      value: 1513449901
+      objectReference: {fileID: 0}
+    - target: {fileID: 199526705384825862, guid: bb18ebaa7cc7d644ebbb893b77ed636d,
+        type: 2}
+      propertyPath: m_SortingLayer
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bb18ebaa7cc7d644ebbb893b77ed636d, type: 2}
   m_IsPrefabAsset: 0
@@ -1285,6 +1368,16 @@ Prefab:
     - target: {fileID: 114876149866635534, guid: c517bdaacfad72e4eb51f53f55370c53,
         type: 2}
       propertyPath: hitboxDisableTimer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 199158525747617872, guid: c517bdaacfad72e4eb51f53f55370c53,
+        type: 2}
+      propertyPath: m_SortingLayerID
+      value: 1513449901
+      objectReference: {fileID: 0}
+    - target: {fileID: 199158525747617872, guid: c517bdaacfad72e4eb51f53f55370c53,
+        type: 2}
+      propertyPath: m_SortingLayer
       value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -1351,6 +1444,16 @@ Prefab:
       propertyPath: hitboxDisableTimer
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 199158525747617872, guid: c517bdaacfad72e4eb51f53f55370c53,
+        type: 2}
+      propertyPath: m_SortingLayerID
+      value: 1513449901
+      objectReference: {fileID: 0}
+    - target: {fileID: 199158525747617872, guid: c517bdaacfad72e4eb51f53f55370c53,
+        type: 2}
+      propertyPath: m_SortingLayer
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c517bdaacfad72e4eb51f53f55370c53, type: 2}
   m_IsPrefabAsset: 0
@@ -1406,6 +1509,16 @@ Prefab:
     - target: {fileID: 1393775585965408, guid: c517bdaacfad72e4eb51f53f55370c53, type: 2}
       propertyPath: m_Name
       value: FlyingSpawnFromLeft (20)
+      objectReference: {fileID: 0}
+    - target: {fileID: 199158525747617872, guid: c517bdaacfad72e4eb51f53f55370c53,
+        type: 2}
+      propertyPath: m_SortingLayerID
+      value: 1513449901
+      objectReference: {fileID: 0}
+    - target: {fileID: 199158525747617872, guid: c517bdaacfad72e4eb51f53f55370c53,
+        type: 2}
+      propertyPath: m_SortingLayer
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c517bdaacfad72e4eb51f53f55370c53, type: 2}
@@ -1472,6 +1585,16 @@ Prefab:
       propertyPath: hitboxDisableTimer
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 199526705384825862, guid: bb18ebaa7cc7d644ebbb893b77ed636d,
+        type: 2}
+      propertyPath: m_SortingLayerID
+      value: 1513449901
+      objectReference: {fileID: 0}
+    - target: {fileID: 199526705384825862, guid: bb18ebaa7cc7d644ebbb893b77ed636d,
+        type: 2}
+      propertyPath: m_SortingLayer
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bb18ebaa7cc7d644ebbb893b77ed636d, type: 2}
   m_IsPrefabAsset: 0
@@ -1514,27 +1637,18 @@ Prefab:
       propertyPath: m_RootOrder
       value: 72
       objectReference: {fileID: 0}
-    - target: {fileID: 4903041113276004, guid: bb18ebaa7cc7d644ebbb893b77ed636d, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 2.78
-      objectReference: {fileID: 0}
-    - target: {fileID: 61316020363043520, guid: bb18ebaa7cc7d644ebbb893b77ed636d,
-        type: 2}
-      propertyPath: m_Size.y
-      value: 8.18
-      objectReference: {fileID: 0}
-    - target: {fileID: 61316020363043520, guid: bb18ebaa7cc7d644ebbb893b77ed636d,
-        type: 2}
-      propertyPath: m_Size.x
-      value: 2.27
-      objectReference: {fileID: 0}
     - target: {fileID: 1121198744446240, guid: bb18ebaa7cc7d644ebbb893b77ed636d, type: 2}
       propertyPath: m_Name
       value: FlyingSpawn (33)
       objectReference: {fileID: 0}
-    - target: {fileID: 114948817887811886, guid: bb18ebaa7cc7d644ebbb893b77ed636d,
+    - target: {fileID: 199526705384825862, guid: bb18ebaa7cc7d644ebbb893b77ed636d,
         type: 2}
-      propertyPath: hitboxDisableTimer
+      propertyPath: m_SortingLayerID
+      value: 1513449901
+      objectReference: {fileID: 0}
+    - target: {fileID: 199526705384825862, guid: bb18ebaa7cc7d644ebbb893b77ed636d,
+        type: 2}
+      propertyPath: m_SortingLayer
       value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -1592,6 +1706,16 @@ Prefab:
     - target: {fileID: 1393775585965408, guid: c517bdaacfad72e4eb51f53f55370c53, type: 2}
       propertyPath: m_Name
       value: FlyingSpawnFromLeft (15)
+      objectReference: {fileID: 0}
+    - target: {fileID: 199158525747617872, guid: c517bdaacfad72e4eb51f53f55370c53,
+        type: 2}
+      propertyPath: m_SortingLayerID
+      value: 1513449901
+      objectReference: {fileID: 0}
+    - target: {fileID: 199158525747617872, guid: c517bdaacfad72e4eb51f53f55370c53,
+        type: 2}
+      propertyPath: m_SortingLayer
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c517bdaacfad72e4eb51f53f55370c53, type: 2}
@@ -1655,6 +1779,16 @@ Prefab:
     - target: {fileID: 114876149866635534, guid: c517bdaacfad72e4eb51f53f55370c53,
         type: 2}
       propertyPath: hitboxDisableTimer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 199158525747617872, guid: c517bdaacfad72e4eb51f53f55370c53,
+        type: 2}
+      propertyPath: m_SortingLayerID
+      value: 1513449901
+      objectReference: {fileID: 0}
+    - target: {fileID: 199158525747617872, guid: c517bdaacfad72e4eb51f53f55370c53,
+        type: 2}
+      propertyPath: m_SortingLayer
       value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -1722,6 +1856,16 @@ Prefab:
       propertyPath: hitboxDisableTimer
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 199526705384825862, guid: bb18ebaa7cc7d644ebbb893b77ed636d,
+        type: 2}
+      propertyPath: m_SortingLayerID
+      value: 1513449901
+      objectReference: {fileID: 0}
+    - target: {fileID: 199526705384825862, guid: bb18ebaa7cc7d644ebbb893b77ed636d,
+        type: 2}
+      propertyPath: m_SortingLayer
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bb18ebaa7cc7d644ebbb893b77ed636d, type: 2}
   m_IsPrefabAsset: 0
@@ -1767,6 +1911,16 @@ Prefab:
     - target: {fileID: 1128887972537492, guid: 6fb7e0befcec14c499772a91c400fa63, type: 2}
       propertyPath: m_Name
       value: ShooterSpawn (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 199312331485599908, guid: 6fb7e0befcec14c499772a91c400fa63,
+        type: 2}
+      propertyPath: m_SortingLayerID
+      value: 1513449901
+      objectReference: {fileID: 0}
+    - target: {fileID: 199312331485599908, guid: 6fb7e0befcec14c499772a91c400fa63,
+        type: 2}
+      propertyPath: m_SortingLayer
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6fb7e0befcec14c499772a91c400fa63, type: 2}
@@ -1832,6 +1986,16 @@ Prefab:
       propertyPath: hitboxDisableTimer
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 199158525747617872, guid: c517bdaacfad72e4eb51f53f55370c53,
+        type: 2}
+      propertyPath: m_SortingLayerID
+      value: 1513449901
+      objectReference: {fileID: 0}
+    - target: {fileID: 199158525747617872, guid: c517bdaacfad72e4eb51f53f55370c53,
+        type: 2}
+      propertyPath: m_SortingLayer
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c517bdaacfad72e4eb51f53f55370c53, type: 2}
   m_IsPrefabAsset: 0
@@ -1877,6 +2041,16 @@ Prefab:
     - target: {fileID: 1128887972537492, guid: 6fb7e0befcec14c499772a91c400fa63, type: 2}
       propertyPath: m_Name
       value: ShooterSpawn (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 199312331485599908, guid: 6fb7e0befcec14c499772a91c400fa63,
+        type: 2}
+      propertyPath: m_SortingLayerID
+      value: 1513449901
+      objectReference: {fileID: 0}
+    - target: {fileID: 199312331485599908, guid: 6fb7e0befcec14c499772a91c400fa63,
+        type: 2}
+      propertyPath: m_SortingLayer
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6fb7e0befcec14c499772a91c400fa63, type: 2}
@@ -1943,6 +2117,16 @@ Prefab:
       propertyPath: hitboxDisableTimer
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 199526705384825862, guid: bb18ebaa7cc7d644ebbb893b77ed636d,
+        type: 2}
+      propertyPath: m_SortingLayerID
+      value: 1513449901
+      objectReference: {fileID: 0}
+    - target: {fileID: 199526705384825862, guid: bb18ebaa7cc7d644ebbb893b77ed636d,
+        type: 2}
+      propertyPath: m_SortingLayer
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bb18ebaa7cc7d644ebbb893b77ed636d, type: 2}
   m_IsPrefabAsset: 0
@@ -2006,6 +2190,16 @@ Prefab:
     - target: {fileID: 114948817887811886, guid: bb18ebaa7cc7d644ebbb893b77ed636d,
         type: 2}
       propertyPath: hitboxDisableTimer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 199526705384825862, guid: bb18ebaa7cc7d644ebbb893b77ed636d,
+        type: 2}
+      propertyPath: m_SortingLayerID
+      value: 1513449901
+      objectReference: {fileID: 0}
+    - target: {fileID: 199526705384825862, guid: bb18ebaa7cc7d644ebbb893b77ed636d,
+        type: 2}
+      propertyPath: m_SortingLayer
       value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -2121,6 +2315,16 @@ Prefab:
       propertyPath: hitboxDisableTimer
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 199526705384825862, guid: bb18ebaa7cc7d644ebbb893b77ed636d,
+        type: 2}
+      propertyPath: m_SortingLayerID
+      value: 1513449901
+      objectReference: {fileID: 0}
+    - target: {fileID: 199526705384825862, guid: bb18ebaa7cc7d644ebbb893b77ed636d,
+        type: 2}
+      propertyPath: m_SortingLayer
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bb18ebaa7cc7d644ebbb893b77ed636d, type: 2}
   m_IsPrefabAsset: 0
@@ -2184,6 +2388,16 @@ Prefab:
     - target: {fileID: 114480757507063578, guid: f96fda035074427489d70f253431f490,
         type: 2}
       propertyPath: hitboxDisableTimer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 199009202934385000, guid: f96fda035074427489d70f253431f490,
+        type: 2}
+      propertyPath: m_SortingLayerID
+      value: 1513449901
+      objectReference: {fileID: 0}
+    - target: {fileID: 199009202934385000, guid: f96fda035074427489d70f253431f490,
+        type: 2}
+      propertyPath: m_SortingLayer
       value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -2251,6 +2465,16 @@ Prefab:
       propertyPath: hitboxDisableTimer
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 199009202934385000, guid: f96fda035074427489d70f253431f490,
+        type: 2}
+      propertyPath: m_SortingLayerID
+      value: 1513449901
+      objectReference: {fileID: 0}
+    - target: {fileID: 199009202934385000, guid: f96fda035074427489d70f253431f490,
+        type: 2}
+      propertyPath: m_SortingLayer
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f96fda035074427489d70f253431f490, type: 2}
   m_IsPrefabAsset: 0
@@ -2316,6 +2540,16 @@ Prefab:
       propertyPath: hitboxDisableTimer
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 199526705384825862, guid: bb18ebaa7cc7d644ebbb893b77ed636d,
+        type: 2}
+      propertyPath: m_SortingLayerID
+      value: 1513449901
+      objectReference: {fileID: 0}
+    - target: {fileID: 199526705384825862, guid: bb18ebaa7cc7d644ebbb893b77ed636d,
+        type: 2}
+      propertyPath: m_SortingLayer
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bb18ebaa7cc7d644ebbb893b77ed636d, type: 2}
   m_IsPrefabAsset: 0
@@ -2371,6 +2605,16 @@ Prefab:
     - target: {fileID: 1393775585965408, guid: c517bdaacfad72e4eb51f53f55370c53, type: 2}
       propertyPath: m_Name
       value: FlyingSpawnFromLeft (18)
+      objectReference: {fileID: 0}
+    - target: {fileID: 199158525747617872, guid: c517bdaacfad72e4eb51f53f55370c53,
+        type: 2}
+      propertyPath: m_SortingLayerID
+      value: 1513449901
+      objectReference: {fileID: 0}
+    - target: {fileID: 199158525747617872, guid: c517bdaacfad72e4eb51f53f55370c53,
+        type: 2}
+      propertyPath: m_SortingLayer
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c517bdaacfad72e4eb51f53f55370c53, type: 2}
@@ -2479,6 +2723,16 @@ Prefab:
       propertyPath: hitboxDisableTimer
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 199526705384825862, guid: bb18ebaa7cc7d644ebbb893b77ed636d,
+        type: 2}
+      propertyPath: m_SortingLayerID
+      value: 1513449901
+      objectReference: {fileID: 0}
+    - target: {fileID: 199526705384825862, guid: bb18ebaa7cc7d644ebbb893b77ed636d,
+        type: 2}
+      propertyPath: m_SortingLayer
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bb18ebaa7cc7d644ebbb893b77ed636d, type: 2}
   m_IsPrefabAsset: 0
@@ -2542,6 +2796,16 @@ Prefab:
     - target: {fileID: 114480757507063578, guid: f96fda035074427489d70f253431f490,
         type: 2}
       propertyPath: hitboxDisableTimer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 199009202934385000, guid: f96fda035074427489d70f253431f490,
+        type: 2}
+      propertyPath: m_SortingLayerID
+      value: 1513449901
+      objectReference: {fileID: 0}
+    - target: {fileID: 199009202934385000, guid: f96fda035074427489d70f253431f490,
+        type: 2}
+      propertyPath: m_SortingLayer
       value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -2628,16 +2892,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 9
       objectReference: {fileID: 0}
-    - target: {fileID: 61413385406974566, guid: f96fda035074427489d70f253431f490,
-        type: 2}
-      propertyPath: m_Size.x
-      value: 105.52
-      objectReference: {fileID: 0}
-    - target: {fileID: 114480757507063578, guid: f96fda035074427489d70f253431f490,
-        type: 2}
-      propertyPath: hitboxDisableTimer
-      value: 2
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f96fda035074427489d70f253431f490, type: 2}
   m_IsPrefabAsset: 0
@@ -2693,6 +2947,16 @@ Prefab:
     - target: {fileID: 1393775585965408, guid: c517bdaacfad72e4eb51f53f55370c53, type: 2}
       propertyPath: m_Name
       value: FlyingSpawnFromLeft (16)
+      objectReference: {fileID: 0}
+    - target: {fileID: 199158525747617872, guid: c517bdaacfad72e4eb51f53f55370c53,
+        type: 2}
+      propertyPath: m_SortingLayerID
+      value: 1513449901
+      objectReference: {fileID: 0}
+    - target: {fileID: 199158525747617872, guid: c517bdaacfad72e4eb51f53f55370c53,
+        type: 2}
+      propertyPath: m_SortingLayer
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c517bdaacfad72e4eb51f53f55370c53, type: 2}
@@ -2757,6 +3021,16 @@ Prefab:
     - target: {fileID: 114948817887811886, guid: bb18ebaa7cc7d644ebbb893b77ed636d,
         type: 2}
       propertyPath: hitboxDisableTimer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 199526705384825862, guid: bb18ebaa7cc7d644ebbb893b77ed636d,
+        type: 2}
+      propertyPath: m_SortingLayerID
+      value: 1513449901
+      objectReference: {fileID: 0}
+    - target: {fileID: 199526705384825862, guid: bb18ebaa7cc7d644ebbb893b77ed636d,
+        type: 2}
+      propertyPath: m_SortingLayer
       value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -2870,6 +3144,16 @@ Prefab:
       propertyPath: hitboxDisableTimer
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 199526705384825862, guid: bb18ebaa7cc7d644ebbb893b77ed636d,
+        type: 2}
+      propertyPath: m_SortingLayerID
+      value: 1513449901
+      objectReference: {fileID: 0}
+    - target: {fileID: 199526705384825862, guid: bb18ebaa7cc7d644ebbb893b77ed636d,
+        type: 2}
+      propertyPath: m_SortingLayer
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bb18ebaa7cc7d644ebbb893b77ed636d, type: 2}
   m_IsPrefabAsset: 0
@@ -2932,6 +3216,16 @@ Prefab:
     - target: {fileID: 114876149866635534, guid: c517bdaacfad72e4eb51f53f55370c53,
         type: 2}
       propertyPath: hitboxDisableTimer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 199158525747617872, guid: c517bdaacfad72e4eb51f53f55370c53,
+        type: 2}
+      propertyPath: m_SortingLayerID
+      value: 1513449901
+      objectReference: {fileID: 0}
+    - target: {fileID: 199158525747617872, guid: c517bdaacfad72e4eb51f53f55370c53,
+        type: 2}
+      propertyPath: m_SortingLayer
       value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -2999,6 +3293,16 @@ Prefab:
       propertyPath: hitboxDisableTimer
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 199526705384825862, guid: bb18ebaa7cc7d644ebbb893b77ed636d,
+        type: 2}
+      propertyPath: m_SortingLayerID
+      value: 1513449901
+      objectReference: {fileID: 0}
+    - target: {fileID: 199526705384825862, guid: bb18ebaa7cc7d644ebbb893b77ed636d,
+        type: 2}
+      propertyPath: m_SortingLayer
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bb18ebaa7cc7d644ebbb893b77ed636d, type: 2}
   m_IsPrefabAsset: 0
@@ -3062,6 +3366,16 @@ Prefab:
     - target: {fileID: 114948817887811886, guid: bb18ebaa7cc7d644ebbb893b77ed636d,
         type: 2}
       propertyPath: hitboxDisableTimer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 199526705384825862, guid: bb18ebaa7cc7d644ebbb893b77ed636d,
+        type: 2}
+      propertyPath: m_SortingLayerID
+      value: 1513449901
+      objectReference: {fileID: 0}
+    - target: {fileID: 199526705384825862, guid: bb18ebaa7cc7d644ebbb893b77ed636d,
+        type: 2}
+      propertyPath: m_SortingLayer
       value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -3273,6 +3587,16 @@ Prefab:
       propertyPath: hitboxDisableTimer
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 199158525747617872, guid: c517bdaacfad72e4eb51f53f55370c53,
+        type: 2}
+      propertyPath: m_SortingLayerID
+      value: 1513449901
+      objectReference: {fileID: 0}
+    - target: {fileID: 199158525747617872, guid: c517bdaacfad72e4eb51f53f55370c53,
+        type: 2}
+      propertyPath: m_SortingLayer
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c517bdaacfad72e4eb51f53f55370c53, type: 2}
   m_IsPrefabAsset: 0
@@ -3328,6 +3652,16 @@ Prefab:
     - target: {fileID: 1393775585965408, guid: c517bdaacfad72e4eb51f53f55370c53, type: 2}
       propertyPath: m_Name
       value: FlyingSpawnFromLeft (19)
+      objectReference: {fileID: 0}
+    - target: {fileID: 199158525747617872, guid: c517bdaacfad72e4eb51f53f55370c53,
+        type: 2}
+      propertyPath: m_SortingLayerID
+      value: 1513449901
+      objectReference: {fileID: 0}
+    - target: {fileID: 199158525747617872, guid: c517bdaacfad72e4eb51f53f55370c53,
+        type: 2}
+      propertyPath: m_SortingLayer
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c517bdaacfad72e4eb51f53f55370c53, type: 2}
@@ -3394,6 +3728,16 @@ Prefab:
       propertyPath: hitboxDisableTimer
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 199526705384825862, guid: bb18ebaa7cc7d644ebbb893b77ed636d,
+        type: 2}
+      propertyPath: m_SortingLayerID
+      value: 1513449901
+      objectReference: {fileID: 0}
+    - target: {fileID: 199526705384825862, guid: bb18ebaa7cc7d644ebbb893b77ed636d,
+        type: 2}
+      propertyPath: m_SortingLayer
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bb18ebaa7cc7d644ebbb893b77ed636d, type: 2}
   m_IsPrefabAsset: 0
@@ -3439,6 +3783,16 @@ Prefab:
     - target: {fileID: 1128887972537492, guid: 6fb7e0befcec14c499772a91c400fa63, type: 2}
       propertyPath: m_Name
       value: ShooterSpawn (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 199312331485599908, guid: 6fb7e0befcec14c499772a91c400fa63,
+        type: 2}
+      propertyPath: m_SortingLayerID
+      value: 1513449901
+      objectReference: {fileID: 0}
+    - target: {fileID: 199312331485599908, guid: 6fb7e0befcec14c499772a91c400fa63,
+        type: 2}
+      propertyPath: m_SortingLayer
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6fb7e0befcec14c499772a91c400fa63, type: 2}
@@ -3502,6 +3856,16 @@ Prefab:
     - target: {fileID: 114876149866635534, guid: c517bdaacfad72e4eb51f53f55370c53,
         type: 2}
       propertyPath: hitboxDisableTimer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 199158525747617872, guid: c517bdaacfad72e4eb51f53f55370c53,
+        type: 2}
+      propertyPath: m_SortingLayerID
+      value: 1513449901
+      objectReference: {fileID: 0}
+    - target: {fileID: 199158525747617872, guid: c517bdaacfad72e4eb51f53f55370c53,
+        type: 2}
+      propertyPath: m_SortingLayer
       value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -3569,6 +3933,16 @@ Prefab:
       propertyPath: hitboxDisableTimer
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 199526705384825862, guid: bb18ebaa7cc7d644ebbb893b77ed636d,
+        type: 2}
+      propertyPath: m_SortingLayerID
+      value: 1513449901
+      objectReference: {fileID: 0}
+    - target: {fileID: 199526705384825862, guid: bb18ebaa7cc7d644ebbb893b77ed636d,
+        type: 2}
+      propertyPath: m_SortingLayer
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bb18ebaa7cc7d644ebbb893b77ed636d, type: 2}
   m_IsPrefabAsset: 0
@@ -3634,6 +4008,16 @@ Prefab:
       propertyPath: hitboxDisableTimer
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 199526705384825862, guid: bb18ebaa7cc7d644ebbb893b77ed636d,
+        type: 2}
+      propertyPath: m_SortingLayerID
+      value: 1513449901
+      objectReference: {fileID: 0}
+    - target: {fileID: 199526705384825862, guid: bb18ebaa7cc7d644ebbb893b77ed636d,
+        type: 2}
+      propertyPath: m_SortingLayer
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bb18ebaa7cc7d644ebbb893b77ed636d, type: 2}
   m_IsPrefabAsset: 0
@@ -3680,6 +4064,16 @@ Prefab:
       propertyPath: m_Name
       value: MovingSpawn (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 199242782861546810, guid: 079eb0a913f39d34e87c86812cc0e27e,
+        type: 2}
+      propertyPath: m_SortingLayerID
+      value: 1513449901
+      objectReference: {fileID: 0}
+    - target: {fileID: 199242782861546810, guid: 079eb0a913f39d34e87c86812cc0e27e,
+        type: 2}
+      propertyPath: m_SortingLayer
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 079eb0a913f39d34e87c86812cc0e27e, type: 2}
   m_IsPrefabAsset: 0
@@ -3722,27 +4116,18 @@ Prefab:
       propertyPath: m_RootOrder
       value: 27
       objectReference: {fileID: 0}
-    - target: {fileID: 61413385406974566, guid: f96fda035074427489d70f253431f490,
-        type: 2}
-      propertyPath: m_Size.x
-      value: 105.52
-      objectReference: {fileID: 0}
     - target: {fileID: 1795093674864370, guid: f96fda035074427489d70f253431f490, type: 2}
       propertyPath: m_Name
       value: FlyingSpawnFromRegion (2)
       objectReference: {fileID: 0}
-    - target: {fileID: 61413385406974566, guid: f96fda035074427489d70f253431f490,
+    - target: {fileID: 199009202934385000, guid: f96fda035074427489d70f253431f490,
         type: 2}
-      propertyPath: m_Offset.x
-      value: 14.74
+      propertyPath: m_SortingLayerID
+      value: 1513449901
       objectReference: {fileID: 0}
-    - target: {fileID: 4312164777533630, guid: f96fda035074427489d70f253431f490, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: -16.08
-      objectReference: {fileID: 0}
-    - target: {fileID: 114480757507063578, guid: f96fda035074427489d70f253431f490,
+    - target: {fileID: 199009202934385000, guid: f96fda035074427489d70f253431f490,
         type: 2}
-      propertyPath: hitboxDisableTimer
+      propertyPath: m_SortingLayer
       value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -3810,6 +4195,16 @@ Prefab:
       propertyPath: hitboxDisableTimer
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 199526705384825862, guid: bb18ebaa7cc7d644ebbb893b77ed636d,
+        type: 2}
+      propertyPath: m_SortingLayerID
+      value: 1513449901
+      objectReference: {fileID: 0}
+    - target: {fileID: 199526705384825862, guid: bb18ebaa7cc7d644ebbb893b77ed636d,
+        type: 2}
+      propertyPath: m_SortingLayer
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bb18ebaa7cc7d644ebbb893b77ed636d, type: 2}
   m_IsPrefabAsset: 0
@@ -3873,6 +4268,16 @@ Prefab:
     - target: {fileID: 114948817887811886, guid: bb18ebaa7cc7d644ebbb893b77ed636d,
         type: 2}
       propertyPath: hitboxDisableTimer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 199526705384825862, guid: bb18ebaa7cc7d644ebbb893b77ed636d,
+        type: 2}
+      propertyPath: m_SortingLayerID
+      value: 1513449901
+      objectReference: {fileID: 0}
+    - target: {fileID: 199526705384825862, guid: bb18ebaa7cc7d644ebbb893b77ed636d,
+        type: 2}
+      propertyPath: m_SortingLayer
       value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -3940,6 +4345,16 @@ Prefab:
       propertyPath: hitboxDisableTimer
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 199526705384825862, guid: bb18ebaa7cc7d644ebbb893b77ed636d,
+        type: 2}
+      propertyPath: m_SortingLayerID
+      value: 1513449901
+      objectReference: {fileID: 0}
+    - target: {fileID: 199526705384825862, guid: bb18ebaa7cc7d644ebbb893b77ed636d,
+        type: 2}
+      propertyPath: m_SortingLayer
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bb18ebaa7cc7d644ebbb893b77ed636d, type: 2}
   m_IsPrefabAsset: 0
@@ -3981,6 +4396,16 @@ Prefab:
     - target: {fileID: 4600328492785088, guid: 6fb7e0befcec14c499772a91c400fa63, type: 2}
       propertyPath: m_RootOrder
       value: 76
+      objectReference: {fileID: 0}
+    - target: {fileID: 199312331485599908, guid: 6fb7e0befcec14c499772a91c400fa63,
+        type: 2}
+      propertyPath: m_SortingLayerID
+      value: 1513449901
+      objectReference: {fileID: 0}
+    - target: {fileID: 199312331485599908, guid: 6fb7e0befcec14c499772a91c400fa63,
+        type: 2}
+      propertyPath: m_SortingLayer
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6fb7e0befcec14c499772a91c400fa63, type: 2}
@@ -4037,6 +4462,16 @@ Prefab:
     - target: {fileID: 1393775585965408, guid: c517bdaacfad72e4eb51f53f55370c53, type: 2}
       propertyPath: m_Name
       value: FlyingSpawnFromLeft (21)
+      objectReference: {fileID: 0}
+    - target: {fileID: 199158525747617872, guid: c517bdaacfad72e4eb51f53f55370c53,
+        type: 2}
+      propertyPath: m_SortingLayerID
+      value: 1513449901
+      objectReference: {fileID: 0}
+    - target: {fileID: 199158525747617872, guid: c517bdaacfad72e4eb51f53f55370c53,
+        type: 2}
+      propertyPath: m_SortingLayer
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c517bdaacfad72e4eb51f53f55370c53, type: 2}
@@ -4096,6 +4531,16 @@ Prefab:
     - target: {fileID: 114876149866635534, guid: c517bdaacfad72e4eb51f53f55370c53,
         type: 2}
       propertyPath: hitboxDisableTimer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 199158525747617872, guid: c517bdaacfad72e4eb51f53f55370c53,
+        type: 2}
+      propertyPath: m_SortingLayerID
+      value: 1513449901
+      objectReference: {fileID: 0}
+    - target: {fileID: 199158525747617872, guid: c517bdaacfad72e4eb51f53f55370c53,
+        type: 2}
+      propertyPath: m_SortingLayer
       value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -4163,6 +4608,16 @@ Prefab:
       propertyPath: hitboxDisableTimer
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 199526705384825862, guid: bb18ebaa7cc7d644ebbb893b77ed636d,
+        type: 2}
+      propertyPath: m_SortingLayerID
+      value: 1513449901
+      objectReference: {fileID: 0}
+    - target: {fileID: 199526705384825862, guid: bb18ebaa7cc7d644ebbb893b77ed636d,
+        type: 2}
+      propertyPath: m_SortingLayer
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bb18ebaa7cc7d644ebbb893b77ed636d, type: 2}
   m_IsPrefabAsset: 0
@@ -4225,6 +4680,16 @@ Prefab:
     - target: {fileID: 114876149866635534, guid: c517bdaacfad72e4eb51f53f55370c53,
         type: 2}
       propertyPath: hitboxDisableTimer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 199158525747617872, guid: c517bdaacfad72e4eb51f53f55370c53,
+        type: 2}
+      propertyPath: m_SortingLayerID
+      value: 1513449901
+      objectReference: {fileID: 0}
+    - target: {fileID: 199158525747617872, guid: c517bdaacfad72e4eb51f53f55370c53,
+        type: 2}
+      propertyPath: m_SortingLayer
       value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -4292,6 +4757,16 @@ Prefab:
       propertyPath: hitboxDisableTimer
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 199526705384825862, guid: bb18ebaa7cc7d644ebbb893b77ed636d,
+        type: 2}
+      propertyPath: m_SortingLayerID
+      value: 1513449901
+      objectReference: {fileID: 0}
+    - target: {fileID: 199526705384825862, guid: bb18ebaa7cc7d644ebbb893b77ed636d,
+        type: 2}
+      propertyPath: m_SortingLayer
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bb18ebaa7cc7d644ebbb893b77ed636d, type: 2}
   m_IsPrefabAsset: 0
@@ -4351,6 +4826,16 @@ Prefab:
     - target: {fileID: 114480757507063578, guid: f96fda035074427489d70f253431f490,
         type: 2}
       propertyPath: hitboxDisableTimer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 199009202934385000, guid: f96fda035074427489d70f253431f490,
+        type: 2}
+      propertyPath: m_SortingLayerID
+      value: 1513449901
+      objectReference: {fileID: 0}
+    - target: {fileID: 199009202934385000, guid: f96fda035074427489d70f253431f490,
+        type: 2}
+      propertyPath: m_SortingLayer
       value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -4418,6 +4903,16 @@ Prefab:
       propertyPath: hitboxDisableTimer
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 199526705384825862, guid: bb18ebaa7cc7d644ebbb893b77ed636d,
+        type: 2}
+      propertyPath: m_SortingLayerID
+      value: 1513449901
+      objectReference: {fileID: 0}
+    - target: {fileID: 199526705384825862, guid: bb18ebaa7cc7d644ebbb893b77ed636d,
+        type: 2}
+      propertyPath: m_SortingLayer
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bb18ebaa7cc7d644ebbb893b77ed636d, type: 2}
   m_IsPrefabAsset: 0
@@ -4482,6 +4977,16 @@ Prefab:
       propertyPath: hitboxDisableTimer
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 199158525747617872, guid: c517bdaacfad72e4eb51f53f55370c53,
+        type: 2}
+      propertyPath: m_SortingLayerID
+      value: 1513449901
+      objectReference: {fileID: 0}
+    - target: {fileID: 199158525747617872, guid: c517bdaacfad72e4eb51f53f55370c53,
+        type: 2}
+      propertyPath: m_SortingLayer
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c517bdaacfad72e4eb51f53f55370c53, type: 2}
   m_IsPrefabAsset: 0
@@ -4527,24 +5032,6 @@ Prefab:
     - target: {fileID: 1393775585965408, guid: c517bdaacfad72e4eb51f53f55370c53, type: 2}
       propertyPath: m_Name
       value: FlyingSpawnFromLeft (9)
-      objectReference: {fileID: 0}
-    - target: {fileID: 4858567151645842, guid: c517bdaacfad72e4eb51f53f55370c53, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 3.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 4858567151645842, guid: c517bdaacfad72e4eb51f53f55370c53, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: -15.36
-      objectReference: {fileID: 0}
-    - target: {fileID: 114876149866635534, guid: c517bdaacfad72e4eb51f53f55370c53,
-        type: 2}
-      propertyPath: stunTimer
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 114876149866635534, guid: c517bdaacfad72e4eb51f53f55370c53,
-        type: 2}
-      propertyPath: hitboxDisableTimer
-      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c517bdaacfad72e4eb51f53f55370c53, type: 2}
@@ -4706,22 +5193,14 @@ Prefab:
       propertyPath: m_Name
       value: FlyingSpawnFromLeft (7)
       objectReference: {fileID: 0}
-    - target: {fileID: 4858567151645842, guid: c517bdaacfad72e4eb51f53f55370c53, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 3.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 4858567151645842, guid: c517bdaacfad72e4eb51f53f55370c53, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: -15.36
-      objectReference: {fileID: 0}
-    - target: {fileID: 114876149866635534, guid: c517bdaacfad72e4eb51f53f55370c53,
+    - target: {fileID: 199158525747617872, guid: c517bdaacfad72e4eb51f53f55370c53,
         type: 2}
-      propertyPath: stunTimer
-      value: 2
+      propertyPath: m_SortingLayerID
+      value: 1513449901
       objectReference: {fileID: 0}
-    - target: {fileID: 114876149866635534, guid: c517bdaacfad72e4eb51f53f55370c53,
+    - target: {fileID: 199158525747617872, guid: c517bdaacfad72e4eb51f53f55370c53,
         type: 2}
-      propertyPath: hitboxDisableTimer
+      propertyPath: m_SortingLayer
       value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -5483,6 +5962,16 @@ Prefab:
       propertyPath: hitboxDisableTimer
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 199526705384825862, guid: bb18ebaa7cc7d644ebbb893b77ed636d,
+        type: 2}
+      propertyPath: m_SortingLayerID
+      value: 1513449901
+      objectReference: {fileID: 0}
+    - target: {fileID: 199526705384825862, guid: bb18ebaa7cc7d644ebbb893b77ed636d,
+        type: 2}
+      propertyPath: m_SortingLayer
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bb18ebaa7cc7d644ebbb893b77ed636d, type: 2}
   m_IsPrefabAsset: 0
@@ -5548,6 +6037,16 @@ Prefab:
       propertyPath: hitboxDisableTimer
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 199526705384825862, guid: bb18ebaa7cc7d644ebbb893b77ed636d,
+        type: 2}
+      propertyPath: m_SortingLayerID
+      value: 1513449901
+      objectReference: {fileID: 0}
+    - target: {fileID: 199526705384825862, guid: bb18ebaa7cc7d644ebbb893b77ed636d,
+        type: 2}
+      propertyPath: m_SortingLayer
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bb18ebaa7cc7d644ebbb893b77ed636d, type: 2}
   m_IsPrefabAsset: 0
@@ -5590,28 +6089,9 @@ Prefab:
       propertyPath: m_RootOrder
       value: 62
       objectReference: {fileID: 0}
-    - target: {fileID: 4903041113276004, guid: bb18ebaa7cc7d644ebbb893b77ed636d, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 2.78
-      objectReference: {fileID: 0}
-    - target: {fileID: 61316020363043520, guid: bb18ebaa7cc7d644ebbb893b77ed636d,
-        type: 2}
-      propertyPath: m_Size.y
-      value: 8.18
-      objectReference: {fileID: 0}
-    - target: {fileID: 61316020363043520, guid: bb18ebaa7cc7d644ebbb893b77ed636d,
-        type: 2}
-      propertyPath: m_Size.x
-      value: 2.27
-      objectReference: {fileID: 0}
     - target: {fileID: 1121198744446240, guid: bb18ebaa7cc7d644ebbb893b77ed636d, type: 2}
       propertyPath: m_Name
       value: FlyingSpawn (30)
-      objectReference: {fileID: 0}
-    - target: {fileID: 114948817887811886, guid: bb18ebaa7cc7d644ebbb893b77ed636d,
-        type: 2}
-      propertyPath: hitboxDisableTimer
-      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bb18ebaa7cc7d644ebbb893b77ed636d, type: 2}
@@ -5678,6 +6158,16 @@ Prefab:
       propertyPath: hitboxDisableTimer
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 199526705384825862, guid: bb18ebaa7cc7d644ebbb893b77ed636d,
+        type: 2}
+      propertyPath: m_SortingLayerID
+      value: 1513449901
+      objectReference: {fileID: 0}
+    - target: {fileID: 199526705384825862, guid: bb18ebaa7cc7d644ebbb893b77ed636d,
+        type: 2}
+      propertyPath: m_SortingLayer
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bb18ebaa7cc7d644ebbb893b77ed636d, type: 2}
   m_IsPrefabAsset: 0
@@ -5741,6 +6231,16 @@ Prefab:
     - target: {fileID: 114948817887811886, guid: bb18ebaa7cc7d644ebbb893b77ed636d,
         type: 2}
       propertyPath: hitboxDisableTimer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 199526705384825862, guid: bb18ebaa7cc7d644ebbb893b77ed636d,
+        type: 2}
+      propertyPath: m_SortingLayerID
+      value: 1513449901
+      objectReference: {fileID: 0}
+    - target: {fileID: 199526705384825862, guid: bb18ebaa7cc7d644ebbb893b77ed636d,
+        type: 2}
+      propertyPath: m_SortingLayer
       value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -11940,6 +12440,16 @@ Prefab:
       propertyPath: hitboxDisableTimer
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 199526705384825862, guid: bb18ebaa7cc7d644ebbb893b77ed636d,
+        type: 2}
+      propertyPath: m_SortingLayerID
+      value: 1513449901
+      objectReference: {fileID: 0}
+    - target: {fileID: 199526705384825862, guid: bb18ebaa7cc7d644ebbb893b77ed636d,
+        type: 2}
+      propertyPath: m_SortingLayer
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bb18ebaa7cc7d644ebbb893b77ed636d, type: 2}
   m_IsPrefabAsset: 0
@@ -11989,6 +12499,16 @@ Prefab:
     - target: {fileID: 114948817887811886, guid: bb18ebaa7cc7d644ebbb893b77ed636d,
         type: 2}
       propertyPath: hitboxDisableTimer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 199526705384825862, guid: bb18ebaa7cc7d644ebbb893b77ed636d,
+        type: 2}
+      propertyPath: m_SortingLayerID
+      value: 1513449901
+      objectReference: {fileID: 0}
+    - target: {fileID: 199526705384825862, guid: bb18ebaa7cc7d644ebbb893b77ed636d,
+        type: 2}
+      propertyPath: m_SortingLayer
       value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
