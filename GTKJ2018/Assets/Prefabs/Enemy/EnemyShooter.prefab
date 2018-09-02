@@ -39,7 +39,7 @@ GameObject:
   - component: {fileID: 114530428540685008}
   - component: {fileID: 212188369639358002}
   - component: {fileID: 82274570590451388}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: EnemyShooter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -70,7 +70,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1066016091974306}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.13498318, y: -1.8425806, z: 0}
+  m_LocalPosition: {x: 6.996534, y: -1.5341649, z: 0}
   m_LocalScale: {x: -1, y: 1, z: 1}
   m_Children:
   - {fileID: 4429625176124040}
@@ -114,7 +114,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 14b235988ae33674ea944b08d5043cfd, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0

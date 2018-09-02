@@ -15,7 +15,7 @@ public class PlayerController : MonoBehaviour
     public int currentHealth = 7;
     public int maxHealth = 7;
     bool isDead = false;
-
+    public AudioSource damageSound;
     
 
     public float walkSpeed_max = 5; // max walking speed
@@ -293,6 +293,8 @@ public class PlayerController : MonoBehaviour
         {
             SetInvincible(true);
             currentHealth -= damage;
+
+            damageSound.Play();
 
             if (currentHealth < 0 || currentHealth >= maxHealth)
             {
