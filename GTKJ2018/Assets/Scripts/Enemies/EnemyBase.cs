@@ -27,6 +27,12 @@ public class EnemyBase : MonoBehaviour {
     //stun graphic
     public ParticleSystem stunAnim;
 
+    //Grounded check
+    protected float fRaycastOffset = 0.80f;
+    protected float fRaycastDistance = 0.18f;
+    public LayerMask whatIsGround;
+    public bool isGrounded { get { return (IsGroundedFunc(fRaycastOffset) || IsGroundedFunc(-fRaycastOffset)); } }
+
     // Use this for initialization
     protected virtual void Start () {
         //Get Animation Manager
@@ -97,6 +103,30 @@ public class EnemyBase : MonoBehaviour {
     {
         GameController.instance.levelController.uiControl.AddScoreNumber(25);
         Destroy(this.gameObject);
+    }
+
+    public bool IsGroundedFunc(float offsetX)
+    {
+        Vector3 origin = transform.position;
+        origin.x += offsetX;
+
+        origin.y = m_col.bounds.min.y;
+
+        RaycastHit2D hitInfo = Physics2D.Raycast(origin, Vector2.down, fRaycastDistance, whatIsGround);
+
+        if (Mathf.Abs(-m_rb.velocity.y) > 1)
+            return false;
+
+        //If we hit no collider, this means we are NOT grounded (= not on the ground)
+        if (hitInfo.collider == null)
+        {
+            Debug.DrawRay(origin, Vector2.down * fRaycastDistance, Color.green);
+
+            return false;
+        }
+        Debug.DrawRay(origin, Vector2.down * fRaycastDistance, Color.red);
+
+        return true;
     }
 
 }
