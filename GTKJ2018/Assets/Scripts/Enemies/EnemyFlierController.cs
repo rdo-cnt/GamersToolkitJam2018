@@ -99,10 +99,18 @@ public class EnemyFlierController : EnemyBase {
                 startPos = this.transform.position;
                 //whatIsGround = LayerMask.NameToLayer("Ground");
             }
-            
-
-            
-           
+ 
+        }
+        else
+        {
+            float n = Mathf.Abs(transform.position.x - mySpawner.transform.position.x);
+            if (n > distanceThreshold)
+                m_rb.velocity = new Vector2(-speed, speed);
+            if (n > (distanceThreshold * 2))
+            {
+                mySpawner.enemyDeployed = false;
+                this.gameObject.SetActive(false);
+            }
         }
     }
 

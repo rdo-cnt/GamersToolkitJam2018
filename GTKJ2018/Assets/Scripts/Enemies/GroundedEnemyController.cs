@@ -151,7 +151,7 @@ public class GroundedEnemyController : EnemyBase
         RaycastHit2D hitInfo2 = Physics2D.Raycast(centerTemp2, new Vector2(offsetX, 0), fRaycastDistance, whatIsGround);
 
         //if there was no collider
-        if (hitInfo.collider == null || hitInfo2.collider == null)
+        if (hitInfo.collider == null && hitInfo2.collider == null)
         {
             //this will draw a line in our screen, similar to the raycast
             Debug.DrawRay(centerTemp, new Vector2(fRaycastDistance * (Mathf.Abs(offsetX) / offsetX), 0), Color.green);

@@ -22,12 +22,12 @@ public class GunFire : EnemyBase {
     public bool startIt;
 
     float firingStart;
-    float firingDelay = .50f;
-    float firingSpeed = .2f;
+    public float firingDelay = .50f;
+    public float firingSpeed = .2f;
     bool isFireStarted;
     bool isFiringReal;
     int bulletCounter = 0;
-    int bulletMax = 6;
+    public int bulletMax = 6;
     bool hitByBullet;
 
     public AudioSource shootingSound;
