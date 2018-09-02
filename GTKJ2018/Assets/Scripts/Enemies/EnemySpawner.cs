@@ -5,12 +5,16 @@ using UnityEngine;
 public class EnemySpawner : MonoBehaviour {
 
     //Enemy Container
+    public List<EnemyFlierController> myFlyingEnemiesList;
     public EnemyFlierController myFlyingEnemy;
     public GroundedEnemyController myWalkingEnemy;
     public Vector3 initialPos;
     public bool enemyDeployed;
     public bool canDeploy;
     public bool isConstantRegion;
+    public int maxSpawnsAtOnce = 4;
+    public float spawnDelay = 3.0f;
+    float spawnLastTime;
 
 	// Use this for initialization
 	void Start ()
@@ -34,27 +38,52 @@ public class EnemySpawner : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+
+
 		if(canDeploy && !enemyDeployed)
         {
-            if (myFlyingEnemy)
+            if (!isConstantRegion)
             {
-                myFlyingEnemy.transform.position = initialPos;
-                if (!myFlyingEnemy.enabled)
-                    myFlyingEnemy.enabled = true;
-                myFlyingEnemy.gameObject.SetActive(true);
-                enemyDeployed = true;
-                if (isConstantRegion)
+                if (myFlyingEnemy)
                 {
-                    //Debug.Log("doing const region spawn");
-                    myFlyingEnemy.InitFromRegion();
-                }
-                else
-                {
+                    myFlyingEnemy.transform.position = initialPos;
+                    if (!myFlyingEnemy.enabled)
+                        myFlyingEnemy.enabled = true;
+                    myFlyingEnemy.gameObject.SetActive(true);
+                    enemyDeployed = true;
                     myFlyingEnemy.InitMovement();
-                }
-                
-                
+                }           
             }
+            else
+            {
+                if (spawnLastTime + spawnDelay < Time.time)
+                {
+                    List<EnemyFlierController> removalList = new List<EnemyFlierController>();
+                    foreach(EnemyFlierController fly in myFlyingEnemiesList)
+                    {
+                        if (fly.gameObject.activeSelf == false)
+                        {
+                            removalList.Add(fly);
+                        }
+                    }
+                    foreach(EnemyFlierController flyremove in removalList)
+                    {
+                        myFlyingEnemiesList.Remove(flyremove);
+                        Destroy(flyremove.gameObject);
+                    }
+                    if (myFlyingEnemiesList.Count < maxSpawnsAtOnce)
+                    {
+                        GameObject newFlyer = Instantiate(myFlyingEnemy.gameObject);
+                        newFlyer.gameObject.SetActive(true);
+                        newFlyer.GetComponent<EnemyFlierController>().enabled = true;
+                        newFlyer.GetComponent<EnemyFlierController>().InitFromRegion();
+                        newFlyer.GetComponent<EnemyFlierController>().mySpawner = this;
+                        myFlyingEnemiesList.Add(newFlyer.GetComponent<EnemyFlierController>());
+                    }
+                    spawnLastTime = Time.time;
+                }
+            }
+
             if (myWalkingEnemy)
             {
                 myWalkingEnemy.transform.position = initialPos;

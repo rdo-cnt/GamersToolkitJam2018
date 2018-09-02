@@ -16,6 +16,8 @@ public class EnemyFlierController : EnemyBase {
     int sinMovement = 0;
     Vector3 startPos;
 
+    bool wasRegionDeployed = false;
+
     // Use this for initialization
     protected override void Start() {
         base.Start();
@@ -54,8 +56,13 @@ public class EnemyFlierController : EnemyBase {
             {
                 if (mySpawner)
                 {
+
                     this.gameObject.SetActive(false);
-                    mySpawner.enemyDeployed = false;
+                    if (!wasRegionDeployed)
+                    {
+                        mySpawner.enemyDeployed = false;
+                    }
+                    
                 }
 
             }
@@ -89,7 +96,7 @@ public class EnemyFlierController : EnemyBase {
 
     public void InitFromRegion()
     {
-        
+        wasRegionDeployed = true;
         if (GameController.instance.levelController)
         {
             if (GameController.instance.levelController.playerObject.GetComponent<SpriteRenderer>().flipX)
