@@ -25,6 +25,7 @@ GameObject:
   - component: {fileID: 114102275586808696}
   - component: {fileID: 82812800268749548}
   - component: {fileID: 82536299772062950}
+  - component: {fileID: 95561076417833628}
   m_Layer: 9
   m_Name: Player
   m_TagString: Untagged
@@ -39,7 +40,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1725544150387136}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.9291353, y: -3.2291212, z: 0.16308594}
+  m_LocalPosition: {x: 0.33, y: -3.2291212, z: 0.16308594}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -270,6 +271,24 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!95 &95561076417833628
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1725544150387136}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 9e1f22d6749871c4184907056b1c40c9, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &114102275586808696
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -286,6 +305,8 @@ MonoBehaviour:
   currentHealth: 7
   maxHealth: 7
   damageSound: {fileID: 82536299772062950}
+  anim: {fileID: 95561076417833628}
+  mySpawnPoint: {x: 0, y: 0, z: 0}
   walkSpeed_max: 2.5
   walkSpeed_acceleration: 40
   jump_forceInit: 7

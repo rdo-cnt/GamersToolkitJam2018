@@ -18,6 +18,7 @@ public class PlayerController : MonoBehaviour
     public int maxHealth = 7;
     bool isDead = false;
     public AudioSource damageSound;
+    public Animator anim;
 
     //spawnpoint
     public Vector3 mySpawnPoint;
@@ -261,6 +262,15 @@ public class PlayerController : MonoBehaviour
         if (forceWalk)
         {
             moveInput = 1.0f;
+        }
+        if (moveInput >0.01f || moveInput < -0.01f)
+        {
+            anim.SetBool("isWalking", true);
+            Debug.Log("set it to walking");
+        }
+        else
+        {
+            anim.SetBool("isWalking", false);
         }
         if (rb.velocity.x < walkSpeed_max && moveInput > 0) //checks if you can move right
         {
