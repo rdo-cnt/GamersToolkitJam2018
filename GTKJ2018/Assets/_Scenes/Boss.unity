@@ -5110,7 +5110,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09f54015de8688b458385d656d78016c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bossRoom: {fileID: 0}
+  bossRoom: {fileID: 983071638}
   movePositions:
   - {fileID: 1011653622}
   - {fileID: 1197342458}
