@@ -281,6 +281,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81ca1e54e6a17154cb38d1cfd25940c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  controllable: 1
+  forceWalk: 0
   currentHealth: 7
   maxHealth: 7
   damageSound: {fileID: 82536299772062950}
@@ -296,7 +298,7 @@ MonoBehaviour:
   parryBounceForce: 10
   parryLayers:
     serializedVersion: 2
-    m_Bits: 1024
+    m_Bits: 3072
   parryOffset: {x: 0.5, y: 0}
   parryHitboxSize: {x: 0.5, y: 1.5}
   parrySoundEffect: {fileID: 82812800268749548}

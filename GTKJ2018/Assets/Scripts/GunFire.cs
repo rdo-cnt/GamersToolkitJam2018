@@ -2,11 +2,21 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GunFire : MonoBehaviour {
+public class GunFire : EnemyBase {
 
     public ParticleSystem main;
     public ParticleSystem secondary;
     public GameObject bulletPrefab;
+
+    public GameObject explosionPrefab;
+    public GameObject runnerPrefab;
+
+    Transform target;
+
+    public float lookDistance; // distance between the player and him before he starts shooting
+    bool inRange;
+    public float restingTime;
+    bool isResting;
 
     public bool stopIt;
     public bool startIt;
@@ -18,16 +28,19 @@ public class GunFire : MonoBehaviour {
     bool isFiringReal;
     int bulletCounter = 0;
     int bulletMax = 6;
+    bool hitByBullet;
 
     public AudioSource shootingSound;
 
 	// Use this for initialization
-	void Start ()
+	protected override void Start ()
     {
         //main.gameObject.SetActive(false);
         main.Stop();
+        target = GameController.player.transform;
+
         secondary.Stop();
-		
+        m_rb = GetComponent<Rigidbody2D>();
 	}
 	
 	// Update is called once per frame
@@ -43,7 +56,25 @@ public class GunFire : MonoBehaviour {
             startIt = false;
             StartFiring();
         }
-        
+
+        MonitorShooting(); //ik's shooting timer script stuff
+
+        if ( Mathf.Abs(target.position.x - transform.position.x) < lookDistance) // if player is closer than the lookDistance
+            inRange = true;
+
+        if (inRange && !isResting && !isFiringReal && !isFireStarted)
+            startIt = true;
+
+        if (stunned) //after hit, remember it
+            hitByBullet = true;
+
+        if (hitByBullet && !stunned) //after recovering from the stun, explode
+            Explode();
+
+	}
+
+    void MonitorShooting()
+    {
         if (isFireStarted)
         {
             if (firingStart + firingDelay < Time.time && !isFiringReal)
@@ -66,13 +97,22 @@ public class GunFire : MonoBehaviour {
                     {
                         StopFiring();
                     }
-                    
+
                 }
             }
         }
-        
 
-	}
+    }
+
+
+    void Explode()
+    {
+        Instantiate(explosionPrefab, transform.position, transform.rotation);
+        Instantiate(runnerPrefab, transform.position, transform.rotation);
+        Destroy(gameObject);
+
+    }
+
 
     void StartFiring()
     {
@@ -85,12 +125,22 @@ public class GunFire : MonoBehaviour {
 
     void StopFiring()
     {
+        StartCoroutine(RestTimer());
         Debug.Log("stopping it");
         main.Stop();
         secondary.Stop();
         isFireStarted = false;
         isFiringReal = false;
         bulletCounter = 0;
+
+    }
+
+    IEnumerator RestTimer()
+    {
+        isResting = true;
+        yield return new WaitForSeconds(restingTime);
+        isResting = false;
+
     }
 
     void FireBullet()

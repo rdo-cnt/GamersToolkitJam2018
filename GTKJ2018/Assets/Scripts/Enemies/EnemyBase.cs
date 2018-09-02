@@ -55,6 +55,7 @@ public class EnemyBase : MonoBehaviour {
 
         StartCoroutine(StunTimer());
 
+
         m_rb.velocity = Vector2.zero;
 
         //knockback based on direction the attack came from
