@@ -6,6 +6,7 @@ using Cinemachine;
 public class CMCamManager : MonoBehaviour {
 
     public Cinemachine.CinemachineVirtualCameraBase cBase;
+    public Cinemachine.CinemachineConfiner cConfine;
 
 	// Use this for initialization
 	void Start ()
@@ -21,5 +22,23 @@ public class CMCamManager : MonoBehaviour {
     public void SetFollowTarget(Transform followTarget)
     {
         cBase.Follow = followTarget;
+    }
+
+    public void SetConfineTarget(PolygonCollider2D confineTarget)
+    {
+        //Debug.Log("setting confine target to " + confineTarget.name);
+        cConfine.m_BoundingShape2D = confineTarget;
+    }
+
+    public bool HasConfiner()
+    {
+        if (cConfine.m_BoundingShape2D)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
     }
 }
