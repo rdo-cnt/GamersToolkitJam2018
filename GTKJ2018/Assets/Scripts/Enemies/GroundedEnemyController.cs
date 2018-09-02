@@ -5,6 +5,7 @@ using UnityEngine;
 public class GroundedEnemyController : EnemyBase
 {
     public EnemySpawner mySpawner;
+    public Animator anim;
 
     //Variable speed
     public float speed = 3f;
@@ -74,7 +75,12 @@ public class GroundedEnemyController : EnemyBase
 
         if (!stunned && isActivated)
         {
+            anim.SetBool("isMoving", true);
             Movement();
+        }
+        else
+        {
+            anim.SetBool("isMoving", false);
         }
         
 
@@ -101,7 +107,7 @@ public class GroundedEnemyController : EnemyBase
 
     void Movement()
     {
-        
+        anim.SetBool("isMoving", true);
         if (bFacingLeft)
         {
             m_rb.velocity = new Vector2(-speed, m_rb.velocity.y);

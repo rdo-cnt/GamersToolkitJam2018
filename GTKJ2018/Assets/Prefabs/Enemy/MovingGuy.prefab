@@ -103,7 +103,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1113156040102578}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.23, y: -3.53, z: 0.14453125}
+  m_LocalPosition: {x: 7.3636293, y: -1.9007089, z: 0.14453125}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4856034482955214}
@@ -275,6 +275,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 256
   mySpawner: {fileID: 0}
+  anim: {fileID: 95885940111689760}
   speed: 3
   bFacingLeft: 0
   parry_knockback: {x: 0, y: 0}
