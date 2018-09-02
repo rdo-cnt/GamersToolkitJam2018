@@ -29,6 +29,7 @@ public class Bullet : MonoBehaviour {
         {
             isReflected = true;
             moveDirection *= -1;
+            this.transform.localScale = new Vector3(this.transform.localScale.x * -1f, 1, 1);
         }
     }
 

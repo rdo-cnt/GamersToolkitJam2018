@@ -150,14 +150,21 @@ public class PlayerController : MonoBehaviour
 
             if (hits.Length > 0) // if you parry anything
             {
-
+                
                 foreach (Collider2D col in hits)
                 {
+                    Debug.Log("hits at " + col.gameObject.name); 
                     EnemyBase enemy = col.GetComponent<EnemyBase>();
                     if (enemy != null)
                     {
                         Debug.Log(col.name);
                         enemy.OnParried(transform);
+                    }
+                    Bullet bullet = col.GetComponent<Bullet>();
+                    if (bullet != null)
+                    {
+                        Debug.Log("reflecting bullet");
+                        bullet.ReflectBullet();
                     }
                 }
 
