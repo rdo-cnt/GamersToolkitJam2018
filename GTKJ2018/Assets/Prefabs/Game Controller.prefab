@@ -305,4 +305,4 @@ MonoBehaviour:
   soundPlayer: {fileID: 82817269809042754}
   musicPlayer: {fileID: 82742453269955616}
   deathEffect: {fileID: 8300000, guid: 0318696a7b7282748b3ff40646420f02, type: 3}
-  levelFinish: {fileID: 8300000, guid: 95160cfd16651eb488274c54279cebd8, type: 3}
+  levelStairs: {fileID: 8300000, guid: 7a381d6f9b7285a4a85dfb1aa96aea5b, type: 3}
