@@ -39,7 +39,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1725544150387136}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.3, y: -3.38, z: 0.16308594}
+  m_LocalPosition: {x: 5.9291353, y: -3.2291212, z: 0.16308594}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -301,6 +301,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 3072
   parrySoundEffect: {fileID: 82812800268749548}
+  parry_missCooldown: 0.5
   physMat_ground: {fileID: 6200000, guid: cb641acc2023de64bbd958465ce7ed70, type: 2}
   physMat_air: {fileID: 6200000, guid: e5df8ebf04180c3429f7b0880b941182, type: 2}
 --- !u!212 &212605130881315206
