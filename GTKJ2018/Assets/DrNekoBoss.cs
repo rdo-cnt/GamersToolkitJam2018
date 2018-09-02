@@ -7,7 +7,8 @@ public class DrNekoBoss : MonoBehaviour {
     public BossRoom bossRoom;
     public Transform[] movePositions;
     public GameObject laserPrefab;
-    public Transform laserGunHole;
+    public Transform laserGunHole1;
+    public Transform laserGunHole2;
 
     public ParticleSystem stunAnim;
     int currentHealth = 7;
@@ -182,12 +183,22 @@ public class DrNekoBoss : MonoBehaviour {
     void FireLaser()
     {
         laserSound.Play();
-        GameObject newLaserShot = Instantiate(laserPrefab, laserGunHole);
+        GameObject newLaserShot = Instantiate(laserPrefab, laserGunHole1);
         newLaserShot.transform.localPosition = new Vector3(0, 0, 0);
         newLaserShot.transform.parent = null;
         if (this.transform.localScale.x <= 0.0f)
         {
             newLaserShot.GetComponent<Bullet>().FlipDirection();
+        }
+        if (currentHealth < 4)
+        {
+            GameObject newLaserShot2 = Instantiate(laserPrefab, laserGunHole2);
+            newLaserShot2.transform.localPosition = new Vector3(0, 0, 0);
+            newLaserShot2.transform.parent = null;
+            if (this.transform.localScale.x <= 0.0f)
+            {
+                newLaserShot2.GetComponent<Bullet>().FlipDirection();
+            }
         }
     }
 
