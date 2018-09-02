@@ -81,4 +81,13 @@ public class EnemyHitBox : MonoBehaviour
         }
         
     }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        Debug.Log("collision entering");
+        if (collision.gameObject.name == "ForeGround")
+        {
+            Destroy(this.transform.parent.gameObject);
+        }
+    }
 }

@@ -12,10 +12,12 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    public bool controllable = true;
+    public bool forceWalk = false; //used by level endings
     public int currentHealth = 7;
     public int maxHealth = 7;
     bool isDead = false;
-
+    public AudioSource damageSound;
     
 
     public float walkSpeed_max = 5; // max walking speed
@@ -218,20 +220,24 @@ public class PlayerController : MonoBehaviour
 
         if (!isGrounded && !jump_airControl) // if we have no air control, do not move in the air
             return;
-        if (isDead) //cant move while dead
-        {
-            return;
-        }
+        
         float moveInput = Input.GetAxisRaw("Horizontal"); //grabing input
-
+        if (isDead || !controllable) //cant move while dead or has no control.
+        {
+            moveInput = 0;
+        }
+        if (forceWalk)
+        {
+            moveInput = 1.0f;
+        }
         if (rb.velocity.x < walkSpeed_max && moveInput > 0) //checks if you can move right
         {
-            rb.AddForce(Vector2.right * walkSpeed_acceleration * Input.GetAxisRaw("Horizontal"));
+            rb.AddForce(Vector2.right * walkSpeed_acceleration * moveInput);
             sprite.flipX = false; //don't flip around
         }
         if (rb.velocity.x > -walkSpeed_max && moveInput < 0) //checks if you can move left
         {
-            rb.AddForce(Vector2.right * walkSpeed_acceleration * Input.GetAxisRaw("Horizontal"));
+            rb.AddForce(Vector2.right * walkSpeed_acceleration * moveInput);
             sprite.flipX = true; //flip around
         }
 
@@ -294,6 +300,8 @@ public class PlayerController : MonoBehaviour
             SetInvincible(true);
             currentHealth -= damage;
 
+            damageSound.Play();
+
             if (currentHealth < 0 || currentHealth >= maxHealth)
             {
                 currentHealth = Mathf.Clamp(currentHealth, 0, maxHealth);
@@ -307,5 +315,7 @@ public class PlayerController : MonoBehaviour
         }
         
     }
+
+    
 
 }
