@@ -85,7 +85,18 @@ public class GroundedEnemyController : EnemyBase
 
     public void InitMovement()
     {
-        changeDirectionLeft(true);
+        if (GameController.instance.levelController)
+        {
+            if (GameController.instance.levelController.playerObject.transform.position.x < this.transform.position.x)
+            {
+                changeDirectionLeft(true);
+            }
+            else
+            {
+                changeDirectionLeft(false);
+            }
+        }
+        
         stunned = false;
         stunAnim.Stop();
         stunAnim.gameObject.SetActive(false);

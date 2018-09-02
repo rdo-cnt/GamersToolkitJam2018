@@ -42,6 +42,7 @@ public class EnemySpawner : MonoBehaviour {
                     myFlyingEnemy.enabled = true;
                 myFlyingEnemy.gameObject.SetActive(true);
                 enemyDeployed = true;
+                myFlyingEnemy.InitMovement();
             }
             if (myWalkingEnemy)
             {
