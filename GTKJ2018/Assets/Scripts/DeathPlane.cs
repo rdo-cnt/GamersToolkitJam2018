@@ -16,7 +16,7 @@ public class DeathPlane : MonoBehaviour {
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (!collision.GetComponent<EnemyFlierController>())
+        if (!collision.GetComponent<EnemyFlierController>() && !collision.GetComponent<EnemyBase>())
         {
             Debug.Log("triggering death on " + collision.gameObject.name);
             if (collision.GetComponent<EnemyBase>() || collision.GetComponent<PlayerController>())

@@ -46,7 +46,8 @@ public class GunFire : EnemyBase {
 	// Update is called once per frame
 	void Update ()
     {
-		if (stopIt)
+        target = GameController.player.transform;
+        if (stopIt)
         {
             stopIt = false;
             StopFiring();
