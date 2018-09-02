@@ -19,8 +19,10 @@ public class PlayerController : MonoBehaviour
     bool isDead = false;
     public AudioSource damageSound;
 
+
     //spawnpoint
     public Vector3 mySpawnPoint;
+    public bool deadPlaned = false;
     
 
     public float walkSpeed_max = 5; // max walking speed

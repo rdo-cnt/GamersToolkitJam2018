@@ -21,7 +21,12 @@ public class DeathPlane : MonoBehaviour {
             Debug.Log("triggering death on " + collision.gameObject.name);
             if (collision.GetComponent<EnemyBase>() || collision.GetComponent<PlayerController>())
             {
+                if (collision.GetComponent<PlayerController>() != null)
+                {
+                    collision.GetComponent<PlayerController>().deadPlaned = true;
+                }
                 collision.gameObject.SendMessage("Die");
+
             }
         }
         
