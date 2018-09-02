@@ -179,6 +179,21 @@ Prefab:
       propertyPath: m_LocalPosition.y
       value: 2.78
       objectReference: {fileID: 0}
+    - target: {fileID: 212398969874449834, guid: c517bdaacfad72e4eb51f53f55370c53,
+        type: 2}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 212398969874449834, guid: c517bdaacfad72e4eb51f53f55370c53,
+        type: 2}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 212398969874449834, guid: c517bdaacfad72e4eb51f53f55370c53,
+        type: 2}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c517bdaacfad72e4eb51f53f55370c53, type: 2}
   m_IsPrefabAsset: 0
@@ -315,6 +330,21 @@ Prefab:
       propertyPath: m_Name
       value: RobotIdle (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 212148157527142640, guid: 35b996211a536fc47af1098c3f9df06a,
+        type: 2}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 212148157527142640, guid: 35b996211a536fc47af1098c3f9df06a,
+        type: 2}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 212148157527142640, guid: 35b996211a536fc47af1098c3f9df06a,
+        type: 2}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 35b996211a536fc47af1098c3f9df06a, type: 2}
   m_IsPrefabAsset: 0
@@ -383,6 +413,21 @@ Prefab:
     - target: {fileID: 4858567151645842, guid: c517bdaacfad72e4eb51f53f55370c53, type: 2}
       propertyPath: m_LocalPosition.y
       value: -1.71
+      objectReference: {fileID: 0}
+    - target: {fileID: 212398969874449834, guid: c517bdaacfad72e4eb51f53f55370c53,
+        type: 2}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 212398969874449834, guid: c517bdaacfad72e4eb51f53f55370c53,
+        type: 2}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 212398969874449834, guid: c517bdaacfad72e4eb51f53f55370c53,
+        type: 2}
+      propertyPath: m_Color.b
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c517bdaacfad72e4eb51f53f55370c53, type: 2}
@@ -614,6 +659,16 @@ Prefab:
       propertyPath: m_AnchoredPosition.y
       value: -0.8500061
       objectReference: {fileID: 0}
+    - target: {fileID: 224368255406922742, guid: 118463de256178440a1591306c52b82b,
+        type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: -14.299988
+      objectReference: {fileID: 0}
+    - target: {fileID: 224709969817467258, guid: 118463de256178440a1591306c52b82b,
+        type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: 3.8200684
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 118463de256178440a1591306c52b82b, type: 2}
   m_IsPrefabAsset: 0
@@ -795,6 +850,21 @@ Prefab:
       propertyPath: m_LocalPosition.y
       value: -1.8
       objectReference: {fileID: 0}
+    - target: {fileID: 212562632972026078, guid: bb18ebaa7cc7d644ebbb893b77ed636d,
+        type: 2}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 212562632972026078, guid: bb18ebaa7cc7d644ebbb893b77ed636d,
+        type: 2}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 212562632972026078, guid: bb18ebaa7cc7d644ebbb893b77ed636d,
+        type: 2}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bb18ebaa7cc7d644ebbb893b77ed636d, type: 2}
   m_IsPrefabAsset: 0
@@ -859,6 +929,21 @@ Prefab:
       propertyPath: m_LocalPosition.y
       value: 3.99
       objectReference: {fileID: 0}
+    - target: {fileID: 212398969874449834, guid: c517bdaacfad72e4eb51f53f55370c53,
+        type: 2}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 212398969874449834, guid: c517bdaacfad72e4eb51f53f55370c53,
+        type: 2}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 212398969874449834, guid: c517bdaacfad72e4eb51f53f55370c53,
+        type: 2}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c517bdaacfad72e4eb51f53f55370c53, type: 2}
   m_IsPrefabAsset: 0
@@ -910,6 +995,21 @@ Prefab:
     - target: {fileID: 1859700347131790, guid: 35b996211a536fc47af1098c3f9df06a, type: 2}
       propertyPath: m_Name
       value: RobotIdle (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 212148157527142640, guid: 35b996211a536fc47af1098c3f9df06a,
+        type: 2}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 212148157527142640, guid: 35b996211a536fc47af1098c3f9df06a,
+        type: 2}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 212148157527142640, guid: 35b996211a536fc47af1098c3f9df06a,
+        type: 2}
+      propertyPath: m_Color.b
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 35b996211a536fc47af1098c3f9df06a, type: 2}
@@ -974,6 +1074,21 @@ Prefab:
     - target: {fileID: 4858567151645842, guid: c517bdaacfad72e4eb51f53f55370c53, type: 2}
       propertyPath: m_LocalPosition.y
       value: -1.31
+      objectReference: {fileID: 0}
+    - target: {fileID: 212398969874449834, guid: c517bdaacfad72e4eb51f53f55370c53,
+        type: 2}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 212398969874449834, guid: c517bdaacfad72e4eb51f53f55370c53,
+        type: 2}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 212398969874449834, guid: c517bdaacfad72e4eb51f53f55370c53,
+        type: 2}
+      propertyPath: m_Color.b
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c517bdaacfad72e4eb51f53f55370c53, type: 2}
@@ -1071,6 +1186,21 @@ Prefab:
       propertyPath: m_RootOrder
       value: 16
       objectReference: {fileID: 0}
+    - target: {fileID: 212148157527142640, guid: 35b996211a536fc47af1098c3f9df06a,
+        type: 2}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 212148157527142640, guid: 35b996211a536fc47af1098c3f9df06a,
+        type: 2}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 212148157527142640, guid: 35b996211a536fc47af1098c3f9df06a,
+        type: 2}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 35b996211a536fc47af1098c3f9df06a, type: 2}
   m_IsPrefabAsset: 0
@@ -1116,6 +1246,21 @@ Prefab:
     - target: {fileID: 1859700347131790, guid: 35b996211a536fc47af1098c3f9df06a, type: 2}
       propertyPath: m_Name
       value: RobotIdle (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 212148157527142640, guid: 35b996211a536fc47af1098c3f9df06a,
+        type: 2}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 212148157527142640, guid: 35b996211a536fc47af1098c3f9df06a,
+        type: 2}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 212148157527142640, guid: 35b996211a536fc47af1098c3f9df06a,
+        type: 2}
+      propertyPath: m_Color.b
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 35b996211a536fc47af1098c3f9df06a, type: 2}
@@ -1208,6 +1353,21 @@ Prefab:
       propertyPath: m_Name
       value: RobotIdle (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 212148157527142640, guid: 35b996211a536fc47af1098c3f9df06a,
+        type: 2}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 212148157527142640, guid: 35b996211a536fc47af1098c3f9df06a,
+        type: 2}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 212148157527142640, guid: 35b996211a536fc47af1098c3f9df06a,
+        type: 2}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 35b996211a536fc47af1098c3f9df06a, type: 2}
   m_IsPrefabAsset: 0
@@ -1260,6 +1420,21 @@ Prefab:
       propertyPath: m_Size.x
       value: 8.633657
       objectReference: {fileID: 0}
+    - target: {fileID: 212562632972026078, guid: bb18ebaa7cc7d644ebbb893b77ed636d,
+        type: 2}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 212562632972026078, guid: bb18ebaa7cc7d644ebbb893b77ed636d,
+        type: 2}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 212562632972026078, guid: bb18ebaa7cc7d644ebbb893b77ed636d,
+        type: 2}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bb18ebaa7cc7d644ebbb893b77ed636d, type: 2}
   m_IsPrefabAsset: 0
@@ -1302,6 +1477,18 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 82742453269955616, guid: 6a6e62d5d637cad4f9b1bfa57cc30cdf,
+        type: 2}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: 243166417818920754, guid: 6b3675e2a718d524c89008bf250663c9,
+        type: 2}
+    - target: {fileID: 82817269809042754, guid: 6a6e62d5d637cad4f9b1bfa57cc30cdf,
+        type: 2}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: 243166417818920754, guid: 6b3675e2a718d524c89008bf250663c9,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6a6e62d5d637cad4f9b1bfa57cc30cdf, type: 2}
   m_IsPrefabAsset: 0
@@ -1366,6 +1553,21 @@ Prefab:
       propertyPath: m_LocalPosition.y
       value: 0.9
       objectReference: {fileID: 0}
+    - target: {fileID: 212398969874449834, guid: c517bdaacfad72e4eb51f53f55370c53,
+        type: 2}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 212398969874449834, guid: c517bdaacfad72e4eb51f53f55370c53,
+        type: 2}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 212398969874449834, guid: c517bdaacfad72e4eb51f53f55370c53,
+        type: 2}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c517bdaacfad72e4eb51f53f55370c53, type: 2}
   m_IsPrefabAsset: 0
@@ -1411,6 +1613,21 @@ Prefab:
     - target: {fileID: 1859700347131790, guid: 35b996211a536fc47af1098c3f9df06a, type: 2}
       propertyPath: m_Name
       value: RobotIdle (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 212148157527142640, guid: 35b996211a536fc47af1098c3f9df06a,
+        type: 2}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 212148157527142640, guid: 35b996211a536fc47af1098c3f9df06a,
+        type: 2}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 212148157527142640, guid: 35b996211a536fc47af1098c3f9df06a,
+        type: 2}
+      propertyPath: m_Color.b
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 35b996211a536fc47af1098c3f9df06a, type: 2}
@@ -1472,6 +1689,21 @@ Prefab:
     - target: {fileID: 1121198744446240, guid: bb18ebaa7cc7d644ebbb893b77ed636d, type: 2}
       propertyPath: m_Name
       value: FlyingSpawn (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 212562632972026078, guid: bb18ebaa7cc7d644ebbb893b77ed636d,
+        type: 2}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 212562632972026078, guid: bb18ebaa7cc7d644ebbb893b77ed636d,
+        type: 2}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 212562632972026078, guid: bb18ebaa7cc7d644ebbb893b77ed636d,
+        type: 2}
+      propertyPath: m_Color.b
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bb18ebaa7cc7d644ebbb893b77ed636d, type: 2}
@@ -1553,6 +1785,21 @@ Prefab:
       propertyPath: m_LocalPosition.x
       value: 3.07
       objectReference: {fileID: 0}
+    - target: {fileID: 212562632972026078, guid: bb18ebaa7cc7d644ebbb893b77ed636d,
+        type: 2}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 212562632972026078, guid: bb18ebaa7cc7d644ebbb893b77ed636d,
+        type: 2}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 212562632972026078, guid: bb18ebaa7cc7d644ebbb893b77ed636d,
+        type: 2}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bb18ebaa7cc7d644ebbb893b77ed636d, type: 2}
   m_IsPrefabAsset: 0
@@ -1626,6 +1873,21 @@ Prefab:
     - target: {fileID: 4903041113276004, guid: bb18ebaa7cc7d644ebbb893b77ed636d, type: 2}
       propertyPath: m_LocalPosition.x
       value: 8.08
+      objectReference: {fileID: 0}
+    - target: {fileID: 212562632972026078, guid: bb18ebaa7cc7d644ebbb893b77ed636d,
+        type: 2}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 212562632972026078, guid: bb18ebaa7cc7d644ebbb893b77ed636d,
+        type: 2}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 212562632972026078, guid: bb18ebaa7cc7d644ebbb893b77ed636d,
+        type: 2}
+      propertyPath: m_Color.b
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bb18ebaa7cc7d644ebbb893b77ed636d, type: 2}
@@ -1763,7 +2025,8 @@ AudioSource:
   m_GameObject: {fileID: 1883975447}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 243078093380421556, guid: 6b3675e2a718d524c89008bf250663c9,
+    type: 2}
   m_audioClip: {fileID: 8300000, guid: 18a8cfc81c1ff464a84846d70910e612, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.75
