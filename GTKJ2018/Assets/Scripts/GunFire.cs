@@ -74,12 +74,20 @@ public class GunFire : EnemyBase {
         if (hitByBullet && !stunned) //after recovering from the stun, explode
             Explode();
 
+
+
 	}
 
     void MonitorShooting()
     {
         if (isFireStarted)
         {
+            if (Vector3.Magnitude(this.transform.position - target.transform.position) > 12)
+            {
+
+                stopIt = true;
+                return;
+            }
             if (firingStart + firingDelay < Time.time && !isFiringReal)
             {
                 Debug.Log("setting firing real");
