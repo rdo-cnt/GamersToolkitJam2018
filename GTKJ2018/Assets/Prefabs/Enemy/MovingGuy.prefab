@@ -43,7 +43,7 @@ GameObject:
   - component: {fileID: 61719277304495898}
   - component: {fileID: 114135527172396216}
   m_Layer: 0
-  m_Name: HitBox
+  m_Name: HurtBox
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -86,7 +86,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1113156040102578}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 13.52, y: -3.53, z: 0.14453125}
+  m_LocalPosition: {x: 9.21, y: -3.53, z: 0.14453125}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4856034482955214}
@@ -236,7 +236,7 @@ MonoBehaviour:
   stunTimer: 2
   knockbackForce: {x: 3, y: 3}
   myHurtBox: {fileID: 0}
-  enemyHitBox: {fileID: 0}
+  myAttackBox: {fileID: 0}
   speed: 5
   bFacingLeft: 0
   whatIsGround:
@@ -266,6 +266,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a85d36be9b3c4ed44b301253c48bf70c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  destroyOnHit: 0
   damageDealt: 1
 --- !u!114 &114642816705611386
 MonoBehaviour:
