@@ -34,6 +34,7 @@ public class PlayerController : MonoBehaviour
     private bool parryInput;
 
     private bool isParrying;
+    private bool parry_blocked = false; //when enabled, you can't parry
 
     public float parryRadius; //radius of where your parry effects
     public float parryTime; //how long does the parry last?
@@ -42,7 +43,8 @@ public class PlayerController : MonoBehaviour
     //public Vector2 parryOffset; // how far forward is the hitbox
     //public Vector2 parryHitboxSize; // how big is the hitbox
     public AudioSource parrySoundEffect; //sound to play when parrying
-    
+    public float parry_missCooldown = 0.5f; //punishement for missing parry
+    private bool parry_inAir; // check if the parry was done in the air or not
 
     private Rigidbody2D rb; //components we'll be messing with
     private Collider2D colli;
@@ -98,7 +100,7 @@ public class PlayerController : MonoBehaviour
         if (jumpInput && isGrounded) // check for ground before jumping
             StartCoroutine(Jump());
 
-        if (parryInput)
+        if (parryInput && !parry_blocked && !isParrying)
             StartCoroutine(Parry());
 
 
@@ -128,6 +130,12 @@ public class PlayerController : MonoBehaviour
         float startTime = Time.time; //grabbing the time to compare to later
         parrySoundEffect.Play();
 
+        if (!isGrounded)
+            parry_inAir = true;
+        else
+            parry_inAir = false;
+
+        bool hitSomething = false;
 
         while (Time.time - startTime < parryTime) //loop this for <parryTime> seconds
         {
@@ -153,10 +161,11 @@ public class PlayerController : MonoBehaviour
 
             if (hits.Length > 0) // if you parry anything
             {
-                
+                hitSomething = true;
+
                 foreach (Collider2D col in hits)
                 {
-                    Debug.Log("hits at " + col.gameObject.name); 
+                    Debug.Log("hits at " + col.gameObject.name);
                     EnemyBase enemy = col.GetComponent<EnemyBase>();
                     if (enemy != null)
                     {
@@ -179,11 +188,19 @@ public class PlayerController : MonoBehaviour
                 isParrying = false;
                 yield break;
             }
+            
 
             yield return new WaitForFixedUpdate(); // looping on fixed update for more consistency
 
         }
         isParrying = false;
+
+        if (!parry_inAir && !hitSomething)
+        {
+            parry_blocked = true;
+            yield return new WaitForSeconds(parry_missCooldown);
+        }
+        parry_blocked = false;
     }
 
     void ParryBounce()
@@ -222,7 +239,7 @@ public class PlayerController : MonoBehaviour
         if (!isGrounded && !jump_airControl) // if we have no air control, do not move in the air
             return;
 
-        if (isGrounded && isParrying)
+        if (isGrounded && isParrying && !parry_inAir)
             return;
 
         float moveInput = Input.GetAxisRaw("Horizontal"); //grabing input
