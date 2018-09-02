@@ -30,6 +30,7 @@ public class GameController : MonoBehaviour {
     public AudioSource soundPlayer;
     public AudioSource musicPlayer;
     public AudioClip deathEffect;
+    public AudioClip levelStairs;
     //public AudioClip[] soundEffects;
 
 
@@ -107,6 +108,15 @@ public class GameController : MonoBehaviour {
         if (soundIndex == 0)
         {
             soundPlayer.PlayOneShot(deathEffect);
+        }
+        if (soundIndex == 1)
+        {
+            //insert play ending tune
+        }
+        if (soundIndex == 2)
+        {
+            
+            soundPlayer.PlayOneShot(levelStairs);
         }
     }
 
