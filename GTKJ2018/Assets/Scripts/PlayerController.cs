@@ -141,6 +141,7 @@ public class PlayerController : MonoBehaviour
         float startTime = Time.time; //grabbing the time to compare to later
         parrySoundEffect.Play();
         sprite.sprite = sprite_idleParry;
+        anim.SetTrigger("attack");
 
         if (!isGrounded)
             parry_inAir = true;
