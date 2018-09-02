@@ -23,12 +23,12 @@ public class EnemyHitBox : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log("I entered with " + other.gameObject.name);
+        //Debug.Log("I entered with " + other.gameObject.name);
         bool playerTest = true;
         bool enemyTest = false;
         if (this.transform.parent.GetComponent<Bullet>()) //gonna be ugly here but make it so
         {
-            Debug.Log("<color=red>I AM A BULLET</color>");
+            //Debug.Log("<color=red>I AM A BULLET</color>");
             Bullet bullet = this.transform.parent.GetComponent<Bullet>();
             if (bullet.isReflected)
             {
@@ -86,7 +86,7 @@ public class EnemyHitBox : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        Debug.Log("collision entering");
+        //Debug.Log("collision entering");
         if (collision.gameObject.name == "ForeGround")
         {
             Destroy(this.transform.parent.gameObject);

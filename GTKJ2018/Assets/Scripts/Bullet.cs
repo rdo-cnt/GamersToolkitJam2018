@@ -63,11 +63,15 @@ public class Bullet : MonoBehaviour {
             isHit = true;
             Destroy(this.gameObject);
         }
+        if (collision.gameObject.layer == LayerMask.NameToLayer("Ground"))
+        {
+            Destroy(this.gameObject);
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "Ground")
+        if (collision.gameObject.layer == LayerMask.NameToLayer("Ground"))
         {
             Destroy(this.gameObject);
         }
