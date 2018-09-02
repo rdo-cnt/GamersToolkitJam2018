@@ -10,6 +10,7 @@ public class EnemySpawner : MonoBehaviour {
     public Vector3 initialPos;
     public bool enemyDeployed;
     public bool canDeploy;
+    public bool isConstantRegion;
 
 	// Use this for initialization
 	void Start ()
@@ -42,7 +43,17 @@ public class EnemySpawner : MonoBehaviour {
                     myFlyingEnemy.enabled = true;
                 myFlyingEnemy.gameObject.SetActive(true);
                 enemyDeployed = true;
-                myFlyingEnemy.InitMovement();
+                if (isConstantRegion)
+                {
+                    //Debug.Log("doing const region spawn");
+                    myFlyingEnemy.InitFromRegion();
+                }
+                else
+                {
+                    myFlyingEnemy.InitMovement();
+                }
+                
+                
             }
             if (myWalkingEnemy)
             {

@@ -87,6 +87,39 @@ public class EnemyFlierController : EnemyBase {
         }
     }
 
+    public void InitFromRegion()
+    {
+        
+        if (GameController.instance.levelController)
+        {
+            if (GameController.instance.levelController.playerObject.GetComponent<SpriteRenderer>().flipX)
+            {
+                this.transform.position = GameController.instance.levelController.playerObject.transform.position + new Vector3(-10f, 0, 0);
+            }
+            else
+            {
+                this.transform.position = GameController.instance.levelController.playerObject.transform.position + new Vector3(+10f, 0, 0);
+            }
+            if (GameController.instance.levelController.playerObject.transform.position.x < this.transform.position.x)
+            {
+                changeDirectionLeft(true);
+            }
+            else
+            {
+                changeDirectionLeft(false);
+            }
+        }
+        startPos = this.transform.position;
+        stunned = false;
+        stunAnim.Stop();
+        stunAnim.gameObject.SetActive(false);
+        if (sinWaveMotion)
+        {
+            sinMovement = 1;
+            sinLerp = Random.Range(0.0f, 2.0f);
+        }
+    }
+
     public void InitMovement()
     {
         if (GameController.instance.levelController)
