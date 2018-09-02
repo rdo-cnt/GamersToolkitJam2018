@@ -57,7 +57,7 @@ GameObject:
   - component: {fileID: 114326427859077456}
   - component: {fileID: 50682344156375350}
   - component: {fileID: 61618191553105444}
-  m_Layer: 10
+  m_Layer: 11
   m_Name: BulletAcorn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -84,7 +84,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1765335083663478}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.83, y: -3.43, z: 0}
+  m_LocalPosition: {x: 3.401, y: -1.827, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4063500661269682}
@@ -131,7 +131,7 @@ BoxCollider2D:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1475371272879036}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
@@ -173,7 +173,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.5, y: 0.5}
+  m_Size: {x: 0.25, y: 0.25}
   m_EdgeRadius: 0
 --- !u!61 &61762878693486132
 BoxCollider2D:
@@ -227,6 +227,8 @@ MonoBehaviour:
   bulletSpeed: 4
   moveDirection: {x: -1, y: 0, z: 0}
   isReflected: 0
+  hitboxDisabledForSeconds: 0.25
+  hitbox: {fileID: 61762878693486132}
 --- !u!114 &114372649898177308
 MonoBehaviour:
   m_ObjectHideFlags: 1

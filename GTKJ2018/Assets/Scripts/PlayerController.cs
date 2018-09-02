@@ -56,7 +56,7 @@ public class PlayerController : MonoBehaviour
 
 
     // Use this for initialization
-    void Start()
+    void Awake()
     {
         GameController.setPlayerReference(this); // set self as player reference to the game controller
         rb = GetComponent<Rigidbody2D>(); //grabbing your components

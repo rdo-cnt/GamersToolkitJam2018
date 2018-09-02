@@ -15,7 +15,7 @@ public class LevelController : MonoBehaviour {
     bool isRespawning = false;
 
 	// Use this for initialization
-	void Start ()
+	void Awake ()
     {
 		if (!playerObject)
         {
