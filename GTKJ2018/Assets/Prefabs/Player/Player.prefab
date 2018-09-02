@@ -304,6 +304,8 @@ MonoBehaviour:
   parry_missCooldown: 0.5
   physMat_ground: {fileID: 6200000, guid: cb641acc2023de64bbd958465ce7ed70, type: 2}
   physMat_air: {fileID: 6200000, guid: e5df8ebf04180c3429f7b0880b941182, type: 2}
+  sprite_idle: {fileID: 21300000, guid: 3533000cb6e96a8409ecd67fcc98ef1d, type: 3}
+  sprite_idleParry: {fileID: 21300000, guid: 5504a24ff7709c14f89cdfc2561c67b7, type: 3}
 --- !u!212 &212605130881315206
 SpriteRenderer:
   m_ObjectHideFlags: 1
