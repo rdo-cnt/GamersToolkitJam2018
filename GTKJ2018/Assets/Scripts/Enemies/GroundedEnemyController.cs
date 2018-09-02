@@ -11,9 +11,6 @@ public class GroundedEnemyController : EnemyBase
 
     //Directional Variables
     public bool bFacingLeft;
-    protected float fRaycastDistance = 0.18f;
-    protected float fRaycastOffset = 0.80f;
-    public LayerMask whatIsGround;
     protected bool bRightSideTouch;
     protected bool bLeftSideTouch;
 
