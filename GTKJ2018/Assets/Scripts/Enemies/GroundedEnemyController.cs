@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class GroundedEnemyController : EnemyBase
 {
-
+    public EnemySpawner mySpawner;
 
     //Variable speed
     public float speed = 3f;
@@ -26,9 +26,9 @@ public class GroundedEnemyController : EnemyBase
     // Use this for initialization
     protected override void Start () {
         base.Start();
-        
+
         //m_rb.velocity = new Vector2(-speed, 0);
-        changeDirectionLeft(true);
+        InitMovement();
 
     }
 	
@@ -45,6 +45,21 @@ public class GroundedEnemyController : EnemyBase
                 }
             }
             
+        }
+        else if (isActivated)
+        {
+            if (GameController.instance.levelController)
+            {
+                if (Vector3.Magnitude(this.transform.position - GameController.instance.levelController.playerObject.transform.position) > 11f) //simple as possible set spawn
+                {
+                    if (mySpawner)
+                    {
+                        this.gameObject.SetActive(false);
+                        mySpawner.enemyDeployed = false;
+                    }
+                    
+                }
+            }
         }
 
         //Collisions
@@ -66,6 +81,14 @@ public class GroundedEnemyController : EnemyBase
         }
         
 
+    }
+
+    public void InitMovement()
+    {
+        changeDirectionLeft(true);
+        stunned = false;
+        stunAnim.Stop();
+        stunAnim.gameObject.SetActive(false);
     }
 
     void Movement()

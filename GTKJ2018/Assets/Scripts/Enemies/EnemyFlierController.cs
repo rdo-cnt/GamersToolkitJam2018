@@ -5,7 +5,7 @@ using UnityEngine;
 public class EnemyFlierController : EnemyBase {
 
     //Might have parent spawner
-    public EnemyFlierSpawner mySpawner;
+    public EnemySpawner mySpawner;
     public float speed = 2f;
     public float distanceThreshold = 6f;
 
@@ -35,7 +35,7 @@ public class EnemyFlierController : EnemyBase {
             if(n>(distanceThreshold*2))
             {
                 mySpawner.enemyDeployed = false;
-                this.enabled = false;
+                this.gameObject.SetActive(false);
             }
         }
         
