@@ -295,7 +295,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 256
   parryRadius: 0.51
-  parryTime: 1
+  parryTime: 0.5
   parryBounceForce: 10
   parryLayers:
     serializedVersion: 2
