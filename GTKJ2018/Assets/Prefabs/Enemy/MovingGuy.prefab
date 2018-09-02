@@ -43,7 +43,7 @@ GameObject:
   - component: {fileID: 61719277304495898}
   - component: {fileID: 114135527172396216}
   m_Layer: 0
-  m_Name: HitBox
+  m_Name: HurtBox
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -60,7 +60,7 @@ GameObject:
   - component: {fileID: 61917723172935946}
   - component: {fileID: 114372254285161744}
   m_Layer: 0
-  m_Name: HurtBox
+  m_Name: AttackBox
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -232,11 +232,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canBeHurt: 0
+  hitboxDisableTimer: 2.5
+  attackBoxCollider: {fileID: 61917723172935946}
   stunned: 0
   stunTimer: 2
   knockbackForce: {x: 3, y: 3}
-  myHurtBox: {fileID: 0}
-  enemyHitBox: {fileID: 0}
+  hurtBox: {fileID: 0}
+  attackBox: {fileID: 0}
   speed: 5
   bFacingLeft: 0
   whatIsGround:
@@ -266,6 +268,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a85d36be9b3c4ed44b301253c48bf70c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  destroyOnHit: 0
   damageDealt: 1
 --- !u!114 &114642816705611386
 MonoBehaviour:

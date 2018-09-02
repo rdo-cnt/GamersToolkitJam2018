@@ -10,13 +10,16 @@ public class EnemyBase : MonoBehaviour {
 
     //Variables
     public bool canBeHurt = false;
+    public float hitboxDisableTimer = 0.5f;
+    public Collider2D attackBoxCollider;
+
     public bool stunned = false;
     public float stunTimer;
     public Vector2 knockbackForce;
 
     //Hit and hurtbox components
-    public EnemyHurtBox myHurtBox;
-    public EnemyHitBox enemyHitBox;
+    public EnemyHurtBox hurtBox;
+    public EnemyHitBox attackBox;
 
     //Get Animation Manager
     protected AnimationManager m_anim;
@@ -39,6 +42,14 @@ public class EnemyBase : MonoBehaviour {
     //parry behavior
     public void OnParried(Transform attackSource)
     {
+
+        if (attackBoxCollider != null && attackBoxCollider.enabled)
+        {
+            StartCoroutine(DisableHitBoxTimer());
+        }
+
+
+
         if (stunned)
             return;
 
@@ -52,6 +63,18 @@ public class EnemyBase : MonoBehaviour {
 
     }
 
+    IEnumerator DisableHitBoxTimer()
+    {
+        attackBoxCollider.enabled = false;
+        float startTime = Time.time;
+        while (Time.time - startTime < hitboxDisableTimer)
+        {
+            yield return null;
+        }
+        attackBoxCollider.enabled = true;
+
+    }
+
     IEnumerator StunTimer()
     {
         stunned = true;
@@ -60,7 +83,7 @@ public class EnemyBase : MonoBehaviour {
         float startTime = Time.time;
         while (Time.time - startTime < stunTimer)
         {
-            yield return new WaitForFixedUpdate();
+            yield return null;
         }
         stunned = false;
         stunAnim.Stop();
