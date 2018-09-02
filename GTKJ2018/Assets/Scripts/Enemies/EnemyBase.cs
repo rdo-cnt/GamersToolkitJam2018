@@ -16,7 +16,7 @@ public class EnemyBase : MonoBehaviour {
 
     //Hit and hurtbox components
     public EnemyHurtBox myHurtBox;
-    public EnemyHitBox enemyHitBox;
+    public EnemyHitBox myAttackBox;
 
     //Get Animation Manager
     protected AnimationManager m_anim;
